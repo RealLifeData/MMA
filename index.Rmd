@@ -188,14 +188,14 @@ Location3 <- Location2[1:10,]
 
 
 ```
+&nbsp;
 
 #Mixed Martial Analytics
 
 Data was scraped by an unknown 3rd party from the Sherdog Website.  It can be found [here](https://www.reddit.com/r/datasets/comments/47a7wh/ufc_fights_and_fighter_data/).
 
-There were a total of 3,569 Fights and 1,561 fighters in the two main data sets. 
-The fights ranged from November 12, 1993 all the way up until 2/21/2016. 
-
+There were a total of 3,569 fights and 1,561 fighters in the two main data sets. 
+The fights ranged from November 12, 1993 all the way up until February 21st, 2016. 
 
 All R code for this and other projects can be found on my [GitHub](https://github.com/RealLifeData) site. 
 
@@ -287,12 +287,14 @@ ggplot(data=ydiff3, aes(x = Result.x, y=Diff)) +
 colnames(ydiff3)[colnames(ydiff3)=="Result.x"] <- "Result"
 ydiff3$lower <- NULL
 ydiff3$upper <- NULL
+
+colnames(ydiff3)[colnames(ydiff3)=="Diff"] <- "Difference in Days"
+
 kable(ydiff3)
 ```
 &nbsp;
 
 ##Fight like a girl: Are their gender differences in how MMA fights are won?
-&nbsp;
 
 For both men and women, more fights ended in decision than any other way.  This was followed by striking, then choking then joint locks for both genders. 
 
