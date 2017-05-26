@@ -188,6 +188,7 @@ Location3 <- Location2[1:10,]
 
 
 ```
+
 #Mixed Martial Analytics
 
 Data was scraped by an unknown 3rd party from the Sherdog Website.  It can be found [here](https://www.reddit.com/r/datasets/comments/47a7wh/ufc_fights_and_fighter_data/).
@@ -198,11 +199,14 @@ The fights ranged from November 12, 1993 all the way up until 2/21/2016.
 
 All R code for this and other projects can be found on my [GitHub](https://github.com/RealLifeData) site. 
 
-##Striking versus Grappling:How do fighters win in MMA?
+&nbsp;
+
+##Striking versus Grappling: How do fighters win in MMA?
+
 Most fights are won with striking, followed by chokes and joint locks.  The graph below also indicates that the vast majority of fights were won in the first three rounds. 
 
 
-There were a total of 3,569 fights in this data set. No Contest results are not included. A more detailed analysis of the different types of strikes, chokes, jointlocks that won fights can be found in the supplementary section. Subcategories of winning methods were cleaned up manually.  An analysis of Wins by Decision are also located in the supplemenatry section. 
+There were a total of 3,569 fights in this data set. No Contest results are not included. A more detailed analysis of the different types of strikes, chokes, joint locks that won fights can be found in the supplementary section. Subcategories of winning methods were cleaned up manually.  An analysis of Wins by Decision are also located in the supplementary section. 
 
 &nbsp;
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
@@ -253,7 +257,7 @@ kable(W3)
 
 ##Ring Rust: Is it real? 
 
-The analysis below examined the average days betweens wins and losses for the fighter's last fight.  Results showed that fighter's who won their most recent fight in the data had a shorter time since their last fight than losers. This difference was statistically significant (p < .05) and therefore unlikely due to chance. 
+The analysis below examined the average days between wins and losses for the fighter's last fight.  Results showed that fighter's who won their most recent fight in the data had a shorter time since their last fight than losers. This difference was statistically significant (p = .01) and therefore unlikely due to chance. 
 
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE, comment=FALSE}
 
@@ -287,11 +291,12 @@ kable(ydiff3)
 ```
 &nbsp;
 
-##Fight like a girl: How do boys and girls win MMA fights?
+##Fight like a girl: Are their gender differences in how MMA fights are won?
+&nbsp;
 
 For both men and women, more fights ended in decision than any other way.  This was followed by striking, then choking then joint locks for both genders. 
 
-About 52% of female fights end in decision, while only 42% of male fights end in the same way. Men win more fights with striking (M:32%, F:25%) and choking (M:16%, F:14%) than women.  However, women win fights with jointlocks more so than men (F: 8%, M: 5%).  Overall, women are more likely to last the entirety of the fight than men (F: 52%, M: 48%), but they are also less likely to knock out or choke out their opponents (M: 49%, F: 39%). 
+About 52% of female fights end in decision, while only 42% of male fights end in the same way. Men win more fights with striking (M:32%, F:25%) and choking (M:16%, F:14%) than women.  However, women win fights with joint locks more so than men (F: 8%, M: 5%).  Overall, women are more likely to last the entirety of the fight than men (F: 52%, M: 48%), but they are also less likely to knock out or choke out their opponents (M: 49%, F: 39%). 
 
 There were a total of 3,467 male fights and 102 female fights. The large disparity in the number of male and female fights required an analysis of percentages rather than raw counts. Percentage of total fights were calculated using a simple formula: Winning Method (count)/Fights (count).  Gender was not included in the data set, and was added manually by the author. 
 
@@ -323,7 +328,7 @@ scale_fill_manual("Gender", values = c("Female" = "green", "Male" = "blue"))
 
 ###Are there gender differences in Decision Wins? 
 
-Overall, male fights end in unaimous decisions slightly more often than female fights.  Female fights also have slightly more split decisions and majority decisions. 
+Overall, male fights end in unanimous decisions slightly more often than female fights.  Female fights also have slightly more split decisions and majority decisions. 
 
 
     
