@@ -173,7 +173,7 @@ WLA2$Age <- round(WLA2$Age, digits = 1)
 
 #Record
 Place <- setDT(FR3)[, lapply(.SD, sum), by = .(association), .SDcols = c("Wins", "Loss", "Draw")]
-Place <- filter(Place, !is.na(association))
+Place <- filter(Place, association != "")
 Place2 <- Place[order(-Place$Wins),]
 Place3 <- Place2[1:10,]
 
@@ -445,7 +445,7 @@ kable(Location3)
 
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
 colnames(Place3)[colnames(Place3)=="association"] <- "Association"
-
+rownames(Place3) <- NULL
 kable(Place3)
 
 ```
