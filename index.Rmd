@@ -1,0 +1,738 @@
+---
+title: 
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE)
+```
+
+```{r include = FALSE, warning = FALSE}
+library(dplyr)
+library(data.table)
+library(knitr)
+library(ggplot2)
+setwd("C:\\Users\\owner\\Desktop\\MMA")
+
+#Fight data
+D <- read.csv("Fights2.csv")
+
+#Win Categories:  I didn't like the way the categories were listed in the data, so I made an excel csv sheet that contains the original descriptions and added new categoreis that cleaned up the data. This is merged with fight data using "merge" to make analysis easier. 
+
+
+C <- read.csv("Cat.csv")
+D <- merge(D, C, by = "method_d", all = TRUE)
+D <- setDT(D)
+
+
+#Win/Loss Ratio**************
+W <- select(D, f1fid, f1result)
+Wb <- filter(W, f1result == "win")
+
+W2 <- setDT(Wb)[, lapply(.SD, length), by = .(f1fid), .SDcols = c("f1result")]
+colnames(W2)[colnames(W2)=="f1fid"] <- "Fight_ID"
+colnames(W2)[colnames(W2)=="f1result"] <- "Wins"
+
+L <- select(D, f2fid, f2result)
+Lb <- filter(L, f2result == "loss")
+
+L2 <- setDT(Lb)[, lapply(.SD, length), by = .(f2fid), .SDcols = c("f2result")]
+colnames(L2)[colnames(L2)=="f2fid"] <- "Fight_ID"
+colnames(L2)[colnames(L2)=="f2result"] <- "Loss"
+
+
+DW1 <- select(D, f1fid, f1result)
+DWb1 <- filter(DW1, f1result == "draw")
+
+DW21 <- setDT(DWb1)[, lapply(.SD, length), by = .(f1fid), .SDcols = c("f1result")]
+colnames(DW21)[colnames(DW21)=="f1fid"] <- "Fight_ID"
+colnames(DW21)[colnames(DW21)=="f1result"] <- "Draw"
+
+
+DW <- select(D, f2fid, f2result)
+DWb <- filter(DW, f2result == "draw")
+ 
+DW2 <- setDT(DWb)[, lapply(.SD, length), by = .(f2fid), .SDcols = c("f2result")]
+colnames(DW2)[colnames(DW2)=="f2fid"] <- "Fight_ID"
+colnames(DW2)[colnames(DW2)=="f2result"] <- "Draw"
+
+DW3 <- rbind(DW2, DW21)
+DW4 <- setDT(DW3)[, lapply(.SD, length), by = .(Fight_ID), .SDcols = c("Draw")]
+
+RC <- merge(W2, L2, by = "Fight_ID", all = TRUE)
+RC2 <- merge(RC, DW4, by = "Fight_ID", all = TRUE)
+RC2[is.na(RC2)] <- 0
+
+#Fighters*********
+
+FR <- read.csv("Fighters.csv")
+
+FR2 <- select(FR, fid, name,	Gender, nick,	birth_date,	height,	weight,	association,	class,	locality,	country)
+
+colnames(FR2)[colnames(FR2)=="name"] <- "Name"
+colnames(FR2)[colnames(FR2)=="fid"] <- "Fight_ID"
+
+FR3 <- merge(RC2, FR2, by = "Fight_ID", all = TRUE)
+
+colnames(FR3)[colnames(FR3)=="Name.x"] <- "Name"
+FR3$Record <- (FR3$Wins)/(FR3$Loss)
+FR3$Record <- round(FR3$Record, digits = 2)
+
+
+FR3$Undefeated[FR3$Loss == 0] <- "Undefeated"
+FR3$Undefeated[FR3$Loss >= 1] <- "Defeated"
+
+FR3U <- filter(FR3, Loss == 0)
+FR3D <- filter(FR3, Loss >= 1)
+FR3U$Record <- FR3U$Wins
+
+FR3C <- rbind(FR3U, FR3D)
+
+FR3 <- FR3C
+FR3 <- FR3[!duplicated(FR3), ]
+
+####RING RUST
+
+
+TB_F1 <- select(D, f1fid, f1result, event_date)
+TB_F1$event_date <- as.POSIXct.Date(TB_F1$event_date,format="%Y-%m-%d")
+colnames(TB_F1)[colnames(TB_F1)=="f1fid"] <- "Fight_ID"
+colnames(TB_F1)[colnames(TB_F1)=="f1result"] <- "Result"
+
+
+TB_F2 <- select(D, f2fid, f2result, event_date)
+TB_F2$event_date <- as.POSIXct.Date(TB_F2$event_date,format="%Y-%m-%d")
+colnames(TB_F2)[colnames(TB_F2)=="f2fid"] <- "Fight_ID"
+colnames(TB_F2)[colnames(TB_F2)=="f2result"] <- "Result"
+
+TB_F3 <- rbind(TB_F1, TB_F2)
+TB_F3b <-  TB_F3[ order(TB_F3[,1], -TB_F3[,3]),] 
+TB_F3b <- as.data.table(TB_F3b)
+
+setkey(TB_F3b,Fight_ID)
+x <- TB_F3b[,lapply(.SD,function(x) head(x,2)),by = key(TB_F3b)]
+ 
+xmax <- setDT(x)[,.SD[which.max(event_date)],keyby=Fight_ID]
+colnames(xmax)[colnames(xmax)=="event_date"] <- "EMax"
+
+xmin <- setDT(x)[,.SD[which.min(event_date)],keyby=Fight_ID]
+colnames(xmin)[colnames(xmin)=="event_date"] <- "EMin"
+
+xmaxmin <- merge(xmax, xmin, by = "Fight_ID")
+#xmaxmin$Result.x <- NULL
+#xmaxmin$Result.y <- NULL
+
+
+xmaxmin$EMax <- as.POSIXct(unlist(xmaxmin$EMax), format = "%m/%d/%Y")
+xmaxmin$EMin <- as.POSIXct(unlist(xmaxmin$EMin), format = "%m/%d/%Y")
+
+xmaxmin$Diff <- difftime(xmaxmin$EMax, xmaxmin$EMin, units = c("days"))
+
+
+ydiff <- setDT(xmaxmin)[, lapply(.SD, mean), by = .(Result.x), .SDcols = c("Diff")]
+
+ydiff$Diff <- round(ydiff$Diff, digits = 1)
+
+#write.csv(xmaxmin, file = "ringrust.csv")
+
+std <- function(x) sd(x)/sqrt(length(x))
+
+ydiffse <- setDT(xmaxmin)[, lapply(.SD, std), by = .(Result.x), .SDcols = c("Diff")]
+
+ydiffse$Diff <- round(ydiffse$Diff, digits = 1)
+
+#Age of fighters********************************
+
+Win <- select(D, f1fid, f1result, event_date)
+Loss <- select(D, f2fid, f2result, event_date)
+Age <- select(FR3, Fight_ID, birth_date)
+
+colnames(Win)[colnames(Win)=="f1fid"] <- "Fight_ID"
+colnames(Loss)[colnames(Loss)=="f2fid"] <- "Fight_ID"
+colnames(Win)[colnames(Win)=="f1result"] <- "Result"
+colnames(Loss)[colnames(Loss)=="f2result"] <- "Result"
+
+Win <- as.data.frame(Win)
+Loss <- as.data.frame(Loss)
+WLA <- rbind(Win, Loss)
+WLA2 <- merge(WLA, Age, by = "Fight_ID")
+
+WLA2$birth_date <- as.POSIXct(unlist(WLA2$birth_date), format = "%m/%d/%Y")
+WLA2$event_date <- as.POSIXct(unlist(WLA2$event_date), format = "%m/%d/%Y")
+
+WLA2$Age <- difftime(WLA2$event_date, WLA2$birth_date, units = c("days"))
+
+WLA2$Age <- WLA2$Age / 365
+
+WLA2$Age <- round(WLA2$Age, digits = 1)
+
+#Fights per year********************
+
+
+#Locations of Fighters****************
+
+#Record
+Place <- setDT(FR3)[, lapply(.SD, sum), by = .(association), .SDcols = c("Wins", "Loss", "Draw")]
+Place <- filter(Place, !is.na(association))
+Place2 <- Place[order(-Place$Wins),]
+Place3 <- Place2[1:10,]
+
+FR3$Loc <- paste(FR3$locality, FR3$country, sep = ", ")
+Location <- setDT(FR3)[, lapply(.SD, sum), by = .(Loc), .SDcols = c("Wins", "Loss", "Draw")]
+Location2 <- Location[order(-Location$Wins),]
+Location3 <- Location2[1:10,]
+
+
+
+
+
+
+```
+#Mixed Martial Analytics
+
+Data was scraped by an unknown 3rd party from the Sherdog Website.  It can be found [here](https://www.reddit.com/r/datasets/comments/47a7wh/ufc_fights_and_fighter_data/).
+
+There were a total of 3,569 Fights and 1,561 fighters in the two main data sets. 
+The fights ranged from November 12, 1993 all the way up until 2/21/2016. 
+
+
+All R code for this and other projects can be found on my [GitHub](https://github.com/RealLifeData) site. 
+
+##Striking versus Grappling:How do fighters win in MMA?
+Most fights are won with striking, followed by chokes and joint locks.  The graph below also indicates that the vast majority of fights were won in the first three rounds. 
+
+
+There were a total of 3,569 fights in this data set. No Contest results are not included. A more detailed analysis of the different types of strikes, chokes, jointlocks that won fights can be found in the supplementary section. Subcategories of winning methods were cleaned up manually.  An analysis of Wins by Decision are also located in the supplemenatry section. 
+
+&nbsp;
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
+
+W <- setDT(D)[, lapply(.SD, length), by = .(Category, round), .SDcols = c("f1result")]
+
+W <- filter(W, !is.na(Category))
+W$round <- factor(W$round, levels =c("5", "4", "3", "2", "1"))
+
+W <- filter(W, Category != "Decision")
+#W$Category <- factor(W$Category, 
+                 #    levels =c("DQ", "Injury", "MISC", "Stoppage",
+                  #             "JointLock", "Choke", "Strike", "Decision"))
+
+ggplot(data=W, aes(x = reorder(Category, f1result), y=f1result, fill = round)) +
+  geom_bar(stat="identity", color = "black") +
+  scale_fill_manual(values = c("black", "brown", "purple", "blue", "white")) +
+  ggtitle("Method of Win")+
+  labs(y = "Count", x = "Win Type") +
+  coord_flip()
+
+```
+
+
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
+W2 <- W
+W2$round <- factor(W$round, levels =c("1", "2", "3", "4", "5"))
+W3 <- dcast(W2, Category ~ round) 
+colnames(W3)[colnames(W3)=="1"] <- "Round 1"
+colnames(W3)[colnames(W3)=="2"] <- "Round 2"
+colnames(W3)[colnames(W3)=="3"] <- "Round 3"
+colnames(W3)[colnames(W3)=="4"] <- "Round 4"
+colnames(W3)[colnames(W3)=="5"] <- "Round 5"
+
+W3[is.na(W3)] <- 0
+W3$Total <- W3$`Round 1` + W3$`Round 2` + W3$`Round 3`+ W3$`Round 4`+ W3$`Round 5`
+
+colnames(W3)[colnames(W3)=="SubCat"] <- "Sub Category"
+
+W3 <- W3[order(-W3$Total),] 
+
+row.names(W3) <- NULL
+kable(W3)
+
+
+```
+&nbsp;
+
+##Ring Rust: Is it real? 
+
+The analysis below examined the average days betweens wins and losses for the fighter's last fight.  Results showed that fighter's who won their most recent fight in the data had a shorter time since their last fight than losers. This difference was statistically significant (p < .05) and therefore unlikely due to chance. 
+
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE, comment=FALSE}
+
+ydiff2 <- filter(ydiff, Result.x != "NC")
+
+ydiff2$Result.x <- factor(ydiff2$Result.x, 
+      levels =c("win", "loss", "draw"))
+  
+ydiffse2 <- filter(ydiffse, Result.x != "NC")
+ydiffse2$Result.x <- factor(ydiffse2$Result.x, 
+      levels =c("win", "loss", "draw"))
+
+ydiff2$upper = ydiff2$Diff + ydiffse2$Diff
+ydiff2$lower = ydiff2$Diff - ydiffse2$Diff
+
+ydiff3 <- filter(ydiff2, Result.x != "draw")
+#ydiff2$upper = as.nummeric(ydiff2$upper)
+#ydiff2$lower = as.nummeric(ydiff2$lower)
+
+ggplot(data=ydiff3, aes(x = Result.x, y=Diff)) +
+   geom_bar(stat="identity",  color = "black", fill = "brown") +
+     ggtitle("Ring Rust")+
+   labs(y = "Days Since Last Fight (Average)", x = "Result") +
+   geom_errorbar(aes(ymin = upper, ymax = lower, width = .2))
+
+
+colnames(ydiff3)[colnames(ydiff3)=="Result.x"] <- "Result"
+ydiff3$lower <- NULL
+ydiff3$upper <- NULL
+kable(ydiff3)
+```
+&nbsp;
+
+##Fight like a girl: How do boys and girls win MMA fights?
+
+For both men and women, more fights ended in decision than any other way.  This was followed by striking, then choking then joint locks for both genders. 
+
+About 52% of female fights end in decision, while only 42% of male fights end in the same way. Men win more fights with striking (M:32%, F:25%) and choking (M:16%, F:14%) than women.  However, women win fights with jointlocks more so than men (F: 8%, M: 5%).  Overall, women are more likely to last the entirety of the fight than men (F: 52%, M: 48%), but they are also less likely to knock out or choke out their opponents (M: 49%, F: 39%). 
+
+There were a total of 3,467 male fights and 102 female fights. The large disparity in the number of male and female fights required an analysis of percentages rather than raw counts. Percentage of total fights were calculated using a simple formula: Winning Method (count)/Fights (count).  Gender was not included in the data set, and was added manually by the author. 
+
+    
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
+#Gender**********************
+
+Ge <- setDT(D)[, lapply(.SD, length), by = .(Category, Gender), .SDcols = c("f1result")]
+
+GF <- filter(Ge, Gender == "Female")
+GM <- filter(Ge, Gender == "Male")
+
+GF$Per <- GF$f1result/102
+GM$Per <- GM$f1result/3467
+GF$Gender <- "Female"
+GM$Gender <- "Male"
+
+Ge2 <- rbind(GF, GM)
+Ge3 <- filter(Ge2, !is.na(Category))
+
+ggplot(data=Ge3, aes(x = reorder(Category, Per), y=Per)) +
+  geom_bar(aes(fill = Gender), position = "dodge", stat="identity", color = "black") +
+  labs(y = "Percentage of Fights", x = "Method of Win") +
+  coord_flip()+ 
+scale_fill_manual("Gender", values = c("Female" = "green", "Male" = "blue"))
+
+```
+&nbsp;
+
+###Are there gender differences in Decision Wins? 
+
+Overall, male fights end in unaimous decisions slightly more often than female fights.  Female fights also have slightly more split decisions and majority decisions. 
+
+
+    
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
+DG <- filter(D, method == "Decision")
+
+
+DGF <- filter(DG, Gender == "Female")
+DGM <- filter(DG, Gender == "Male")
+
+DGF2 <- setDT(DGF)[, lapply(.SD, length), by = .(SubCat), .SDcols = c("f1result")]
+
+DGM2 <- setDT(DGM)[, lapply(.SD, length), by = .(SubCat), .SDcols = c("f1result")]
+
+DGF2$Per <- DGF2$f1result/52
+DGM2$Per <- DGM2$f1result/1418
+DGF2$Gender <- "Female"
+DGM2$Gender <- "Male"
+
+DGe2 <- rbind(DGF2, DGM2)
+DGe3 <- filter(DGe2, !is.na(SubCat))
+
+ggplot(data=DGe3, aes(x = reorder(SubCat, Per), y=Per)) +
+  geom_bar(aes(fill = Gender), position = "dodge", stat="identity", color = "black") +
+  labs(y = "Percentage of Fights", x = "Type of Decision") +
+  coord_flip()+ 
+scale_fill_manual("Gender", values = c("Female" = "green", "Male" = "blue"))
+
+```
+
+&nbsp;
+
+##Where do MMA fighters come from? 
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
+
+library("ggmap")
+library("leaflet")
+library("htmlwidgets")
+ 
+#Areas <- setDT(FR3)[, lapply(.SD, length), by = .(Loc), .SDcols = c("Wins")]
+#Areas2 <- filter(Areas, Loc != ", ")
+#colnames(Areas2)[colnames(Areas2)=="Wins"] <- "Count"
+
+#get lat and long of constituents
+#y <- geocode(Areas2$Loc)
+#long <- y$lon
+#lat <- y$lat
+#Areas2$lon <- y$lon
+#Areas2$lat <- y$lat
+#write.csv(Areas2, file = "Areas2.csv")
+
+FR3$Loc[FR3$Loc == "Rio de Janeiro, Brazil"] <- "Rio De Janeiro, Brazil"
+FR3$Loc[FR3$Loc == "Rio de Janeiro, Rio de Janeiro, Brazil"] <- "Rio De Janeiro, Brazil"
+FR3$Loc[FR3$Loc == "Rio de Janiero, Brazil"] <- "Rio De Janeiro, Brazil"
+Areas2 <- read.csv("Areas2.csv")
+
+NAM <- select(FR3, Name, Loc)
+A4 <- merge(Areas2, NAM, all = TRUE )
+
+NameLoc <- aggregate(Name ~ Loc, A4, paste, collapse = ", ")
+NameLoc <- filter(NameLoc, Loc != ", ")
+Areas3 <- merge(NameLoc, Areas2, by = "Loc")
+
+#create popup language
+Name <- paste("Location:", Areas3$Loc, 
+            "/ Count:", Areas3$Count,
+            "/ Fighters:", Areas3$Name,
+          sep = " " )
+ 
+#create map!
+M <- leaflet() %>%
+  addTiles() %>%
+  addCircleMarkers(Areas3$lon, 
+                   Areas3$lat, 
+                   popup = Name,
+                   radius = Areas3$Count)
+M
+ 
+
+
+```
+&nbsp;
+
+##Where do most winners come from?
+Below are tables that include the Countries, Locations and Associations with the most wins. 
+
+**The country with the most wins was USA.** 
+
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
+Country <- setDT(FR3)[, lapply(.SD, sum), by = .(country), .SDcols = c("Wins", "Loss", "Draw")]
+Country2 <- Country[order(-Country$Wins),]
+
+Country3 <- Country2[1:10,]
+colnames(Country3)[colnames(Country3)=="country"] <- "Country"
+
+kable(Country3)
+
+```
+&nbsp;
+
+**The location with the most wins is Rio de Janeiro, Brazil.** 
+
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
+colnames(Location3)[colnames(Location3)=="Loc"] <- "Location"
+
+kable(Location3)
+
+```
+&nbsp;
+
+**The association with the most wins is the American Top Team.** 
+
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
+colnames(Place3)[colnames(Place3)=="association"] <- "Association"
+
+kable(Place3)
+
+```
+
+&nbsp;
+
+
+
+#Supplementary Data 
+
+&nbsp;
+
+###Wins by Strike
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
+
+
+S <- filter(D, Category == "Strike")
+S2 <- setDT(S)[, lapply(.SD, length), by = .(SubCat, round), .SDcols = c("f1result")]
+S2$round <- factor(S2$round, levels =c("5", "4", "3", "2", "1"))
+
+
+ggplot(data=S2, aes(x = reorder(SubCat, f1result), y=f1result, fill = round)) +
+  geom_bar(stat="identity", color = "black") +
+scale_fill_manual(values = c("black", "brown", "purple", "blue", "white")) +
+  ggtitle("Strike Wins")+
+  labs(y = "Count", x = "Win Type") +
+  coord_flip()
+
+```
+
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE, comment=FALSE}
+
+S2$round <- factor(S2$round, levels =c("1", "2", "3", "4", "5"))
+S3 <- dcast(S2, SubCat ~ round) 
+colnames(S3)[colnames(S3)=="1"] <- "Round 1"
+colnames(S3)[colnames(S3)=="2"] <- "Round 2"
+colnames(S3)[colnames(S3)=="3"] <- "Round 3"
+colnames(S3)[colnames(S3)=="4"] <- "Round 4"
+colnames(S3)[colnames(S3)=="5"] <- "Round 5"
+
+S3[is.na(S3)] <- 0
+S3$Total <- S3$`Round 1` + S3$`Round 2` + S3$`Round 3`+ S3$`Round 4`+ S3$`Round 5`
+
+colnames(S3)[colnames(S3)=="SubCat"] <- "Sub Category"
+S3 <- S3[order(-S3$Total),] 
+
+kable(S3)
+
+
+```
+
+&nbsp;
+
+###Wins by Joint Lock
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
+
+JL <- filter(D, Category == "JointLock")
+JL2 <- setDT(JL)[, lapply(.SD, length), by = .(SubCat, round), .SDcols = c("f1result")]
+JL2$round <- factor(JL2$round, levels =c("5", "4", "3", "2", "1"))
+
+
+ggplot(data=JL2, aes(x = reorder(SubCat, f1result), y=f1result, fill = round)) +
+  geom_bar(stat="identity", color = "black") +
+scale_fill_manual(values = c("black", "brown", "purple", "blue", "white")) +
+    ggtitle("Joint Lock Wins")+
+  labs(y = "Count", x = "Win Type") +
+  coord_flip()
+
+```
+
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE, comment=FALSE}
+
+JL2$round <- factor(JL2$round, levels =c("1", "2", "3", "4", "5"))
+JL3 <- dcast(JL2, SubCat ~ round) 
+colnames(JL3)[colnames(JL3)=="1"] <- "Round 1"
+colnames(JL3)[colnames(JL3)=="2"] <- "Round 2"
+colnames(JL3)[colnames(JL3)=="3"] <- "Round 3"
+colnames(JL3)[colnames(JL3)=="4"] <- "Round 4"
+colnames(JL3)[colnames(JL3)=="5"] <- "Round 5"
+
+JL3[is.na(JL3)] <- 0
+JL3$Total <- JL3$`Round 1` + JL3$`Round 2` + JL3$`Round 3`+ JL3$`Round 4`+ JL3$`Round 5`
+
+colnames(JL3)[colnames(JL3)=="SubCat"] <- "Sub Category"
+JL3 <- JL3[order(-JL3$Total),] 
+
+kable(JL3)
+
+```
+&nbsp;
+
+###Wins by Choke
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
+
+
+CH <- filter(D, Category == "Choke")
+CH2 <- setDT(CH)[, lapply(.SD, length), by = .(SubCat, round), .SDcols = c("f1result")]
+CH2$round <- factor(CH2$round, levels =c("5", "4", "3", "2", "1"))
+
+
+ggplot(data=CH2, aes(x = reorder(SubCat, f1result), y=f1result, fill = round)) +
+  geom_bar(stat="identity", color = "black") +
+  scale_fill_manual(values = c("black", "brown", "purple", "blue", "white")) +
+  ggtitle("Method of Win")+
+  labs(y = "Count", x = "Win Type") +
+  coord_flip()
+
+```
+
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE, comment=FALSE}
+
+
+CH2$round <- factor(CH2$round, levels =c("1", "2", "3", "4", "5"))
+CH3 <- dcast(CH2, SubCat ~ round) 
+colnames(CH3)[colnames(CH3)=="1"] <- "Round 1"
+colnames(CH3)[colnames(CH3)=="2"] <- "Round 2"
+colnames(CH3)[colnames(CH3)=="3"] <- "Round 3"
+colnames(CH3)[colnames(CH3)=="4"] <- "Round 4"
+colnames(CH3)[colnames(CH3)=="5"] <- "Round 5"
+
+CH3[is.na(CH3)] <- 0
+CH3$Total <- CH3$`Round 1` + CH3$`Round 2` + CH3$`Round 3`+ CH3$`Round 4`+ CH3$`Round 5`
+
+colnames(CH3)[colnames(CH3)=="SubCat"] <- "Sub Category"
+CH3 <- CH3[order(-CH3$Total),] 
+
+kable(CH3)
+
+
+```
+
+&nbsp;
+
+###Wins by Decision
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
+
+DC <- filter(D, Category == "Decision")
+DC2 <- setDT(DC)[, lapply(.SD, length), by = .(SubCat, round), .SDcols = c("f1result")]
+DC2$round <- factor(DC2$round, levels =c("5", "4", "3", "2", "1"))
+
+
+ggplot(data=DC2, aes(x = reorder(SubCat, f1result), y=f1result, fill = round)) +
+  geom_bar(stat="identity", color = "black") +
+  scale_fill_manual(values = c("black", "purple", "blue", "white")) +
+    ggtitle("Decison Wins")+
+  labs(y = "Count", x = "Win Type") +
+  coord_flip()
+
+```
+
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE, comment=FALSE}
+
+
+DC2$round <- factor(DC2$round, levels =c("1", "2", "3", "4", "5"))
+DC3 <- dcast(DC2, SubCat ~ round) 
+colnames(DC3)[colnames(DC3)=="1"] <- "Round 1"
+colnames(DC3)[colnames(DC3)=="2"] <- "Round 2"
+colnames(DC3)[colnames(DC3)=="3"] <- "Round 3"
+#colnames(DC3)[colnames(DC3)=="4"] <- "Round 4"
+colnames(DC3)[colnames(DC3)=="5"] <- "Round 5"
+
+DC3[is.na(DC3)] <- 0
+DC3$Total <- DC3$`Round 1` + DC3$`Round 2` + DC3$`Round 3`+ DC3$`Round 5`
+
+colnames(DC3)[colnames(DC3)=="SubCat"] <- "Sub Category"
+DC3 <- DC3[order(-DC3$Total),] 
+
+kable(DC3)
+
+
+```
+&nbsp;
+
+###Wins by Injury
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
+
+
+I <- filter(D, Category == "Injury")
+I2 <- setDT(I)[, lapply(.SD, length), by = .(SubCat, round), .SDcols = c("f1result")]
+I2$round <- factor(I2$round, levels =c("5", "4", "3", "2", "1"))
+
+
+ggplot(data=I2, aes(x = reorder(SubCat, f1result), y=f1result, fill = round)) +
+  geom_bar(stat="identity", color = "black") +
+  scale_fill_manual(values = c("purple", "blue", "white")) +
+    ggtitle("Stoppage Wins")+
+  labs(y = "Count", x = "Win Type") +
+  coord_flip()
+
+```
+
+
+
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE, comment=FALSE}
+
+I2$round <- factor(I2$round, levels =c("1", "2", "3", "4", "5"))
+I3 <- dcast(I2, SubCat ~ round) 
+colnames(I3)[colnames(I3)=="1"] <- "Round 1"
+colnames(I3)[colnames(I3)=="2"] <- "Round 2"
+colnames(I3)[colnames(I3)=="3"] <- "Round 3"
+
+I3[is.na(I3)] <- 0
+I3$Total <- I3$`Round 1` + I3$`Round 2` + I3$`Round 3`
+
+colnames(I3)[colnames(I3)=="SubCat"] <- "Sub Category"
+I3 <- I3[order(-I3$Total),] 
+
+kable(I3)
+
+```
+
+&nbsp;
+
+###Wins by Stoppage
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
+
+
+ST <- filter(D, Category == "Stoppage")
+ST2 <- setDT(ST)[, lapply(.SD, length), by = .(SubCat, round), .SDcols = c("f1result")]
+ST2$round <- factor(ST2$round, levels =c("5", "4", "3", "2", "1"))
+
+
+ggplot(data=ST2, aes(x = reorder(SubCat, f1result), y=f1result, fill = round)) +
+  geom_bar(stat="identity", color = "black") +
+  scale_fill_manual(values = c("black", "brown", "purple", "blue", "white")) +
+    ggtitle("Stoppage Wins")+
+  labs(y = "Count", x = "Win Type") +
+  coord_flip()
+
+```
+
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE, comment=FALSE}
+
+ST2$round <- factor(ST2$round, levels =c("1", "2", "3", "4", "5"))
+ST3 <- dcast(ST2, SubCat ~ round) 
+colnames(ST3)[colnames(ST3)=="1"] <- "Round 1"
+colnames(ST3)[colnames(ST3)=="2"] <- "Round 2"
+colnames(ST3)[colnames(ST3)=="3"] <- "Round 3"
+colnames(ST3)[colnames(ST3)=="4"] <- "Round 4"
+colnames(ST3)[colnames(ST3)=="5"] <- "Round 5"
+
+ST3[is.na(ST3)] <- 0
+ST3$Total <- ST3$`Round 1` + ST3$`Round 2` + ST3$`Round 3`+ ST3$`Round 4`+ ST3$`Round 5`
+
+colnames(ST3)[colnames(ST3)=="SubCat"] <- "Sub Category"
+
+ST3 <- ST3[order(-ST3$Total),] 
+kable(ST3)
+
+
+```
+&nbsp;
+
+###Wins for other reasons 
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
+
+
+M <- filter(D, Category == "MISC")
+M2 <- setDT(M)[, lapply(.SD, length), by = .(SubCat, round), .SDcols = c("f1result")]
+M2$round <- factor(M2$round, levels =c("5", "4", "3", "2", "1"))
+
+
+ggplot(data=M2, aes(x = reorder(SubCat, f1result), y=f1result, fill = round)) +
+  geom_bar(stat="identity", color = "black") +
+  scale_fill_manual(values = c("brown", "purple", "blue", "white")) +
+    ggtitle("Miscellaneous Wins")+
+  labs(y = "Count", x = "Win Type") +
+  coord_flip()
+
+```
+
+
+
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE, comment=FALSE}
+
+
+M2$round <- factor(M2$round, levels =c("1", "2", "3", "4", "5"))
+M3 <- dcast(M2, SubCat ~ round) 
+colnames(M3)[colnames(M3)=="1"] <- "Round 1"
+colnames(M3)[colnames(M3)=="2"] <- "Round 2"
+colnames(M3)[colnames(M3)=="3"] <- "Round 3"
+colnames(M3)[colnames(M3)=="4"] <- "Round 4"
+#colnames(M3)[colnames(M3)=="5"] <- "Round 5"
+
+M3[is.na(M3)] <- 0
+M3$Total <- M3$`Round 1` + M3$`Round 2` + M3$`Round 3`+ M3$`Round 4`
+
+colnames(M3)[colnames(M3)=="SubCat"] <- "Sub Category"
+M3 <- M3[order(-M3$Total),] 
+
+kable(M3)
+
+
+```
+
+
+

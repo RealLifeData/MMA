@@ -1,0 +1,844 @@
+,Loc,Count,lon,lat
+376,", Armenia",1,45.038189,40.069099
+269,", Australia",1,133.775136,-25.274398
+576,", Belgium",1,4.469936,50.503887
+135,", Brazil",4,-51.92528,-14.235004
+365,", Bulgaria",1,25.48583,42.733883
+434,", Canada",1,-106.346771,56.130366
+82,", Chile",1,-71.542969,-35.675147
+619,", China",2,104.195397,35.86166
+378,", England",2,-1.1743197,52.3555177
+97,", France",2,2.213749,46.227638
+209,", Holland",1,5.291266,52.132633
+210,", Japan",5,138.252924,36.204824
+46,", Mexico",2,-102.552784,23.634501
+842,", Mongolia",1,103.846656,46.862496
+574,", New Zealand",1,174.885971,-40.900557
+439,", Norway",1,8.468946,60.472024
+718,", Panama",2,-80.782127,8.537981
+799,", Philippines",1,121.774017,12.879721
+822,", Singapore",1,103.819836,1.352083
+513,", South Korea",1,127.766922,35.907757
+814,", Taiwan",1,120.960515,23.69781
+144,", United States",2,-95.712891,37.09024
+156,", USA",2,-95.712891,37.09024
+355,"Aarhus, Denmark",1,10.203921,56.162939
+733,"Accrington, England",1,-2.37218,53.753609
+604,"Ada, Oklahoma, United States",1,-96.6783449,34.774531
+622,"Adams, Massachusetts, United States",1,-73.1174344,42.6242251
+121,"Addison, Illinois, United States",1,-87.9889556,41.931696
+470,"Aguascalientes, Mexico",1,-102.2915131,21.8853247
+645,"Ahmadabad, Ardabil, Iran, Islamic Republic of",1,48.7849642,37.1819218
+817,"Airlie Beach, Queensland, Australia",1,148.716944,-20.2675
+457,"Akita, Japan",1,140.1023643,39.7186135
+111,"Akron, Ohio, United States",1,-81.5190053,41.0814447
+39,"Albuquerque, New Mexico, United States",15,-106.6055534,35.0853336
+801,"Almeirim, Para, Brazil",1,-52.5785846,-1.5239568
+197,"Amarillo, Texas, United States",3,-101.8312969,35.2219971
+570,"Ames, Iowa, United States",1,-93.6319131,42.0307812
+282,"Amherst, Massachusettes, United States",1,-72.5198537,42.3732216
+2,"Amsterdam, Netherlands",3,4.8951679,52.3702157
+96,"Anapolis, Goias, Brazil",1,-48.953403,-16.328546
+545,"Anchorage, Alaska, United States",5,-149.9002778,61.2180556
+765,"Angels Camp, California, United States",1,-120.5385299,38.0677832
+127,"Antioch, Tennessee, United States",1,-86.6715948,36.0597177
+509,"Antrim, Northern Ireland",1,-6.2072498,54.7195338
+476,"Apache Junction, Arizona, United States",1,-111.5495777,33.4150485
+836,"Apopka, Florida, United States",1,-81.5322149,28.6934076
+797,"Arenzville, Illinois, United States",1,-90.3734571,39.8769918
+110,"Arlington, Texas, United States",3,-97.1080656,32.735687
+36,"Arlington, Virginia, United States",1,-77.1067698,38.8799697
+724,"Armadale, West Lothian, Scotland",1,-3.702162,55.897742
+219,"Arpoador, Rio de Janeiro, Brazil",1,-43.1930468,-22.9886205
+654,"Arrecifes, Buenos Aires, Argentina",1,-60.1027115,-34.0627823
+818,"Asuncion, Paraguay",1,-57.575926,-25.2637399
+512,"Atascadero, California, United States",1,-120.6707255,35.4894169
+164,"Athens, Alabama, United States",1,-86.9716741,34.8028661
+433,"Athens, Georgia, Brazil",1,-83.4050645,33.9505627
+318,"Athens, Georgia, United States",4,-83.357567,33.9519347
+418,"Atlanta, Georgia, United States",4,-84.3879824,33.7489954
+460,"Auburn, Washington, United States",1,-122.2284532,47.3073228
+713,"Auckland, New Zealand",1,174.7633315,-36.8484597
+468,"Augusta, Georgia, United States",1,-82.0105148,33.4734978
+272,"Aurora, Colorado, United States",3,-104.8319195,39.7294319
+426,"Austin, Texas, United States",2,-97.7430608,30.267153
+324,"Avignon, France",1,4.805528,43.949317
+825,"Baguio, Cordillera Administrative Region, Philippines",2,120.5960071,16.4023332
+362,"Bakersfield, California, United States",1,-119.0187125,35.3732921
+701,"Baldwin, New York, United States",1,-73.6119129,40.6686336
+507,"Balingen, Germany",1,8.8495298,48.2748206
+473,"Ballymena, Northern Ireland",1,-6.2802213,54.8652935
+464,"Baltimore, Maryland, United States",1,-76.6121893,39.2903848
+655,"Bamberg, South Carolina, United States",1,-81.0348202,33.2971012
+406,"Bangor, Maine, United States",2,-68.7778138,44.8011821
+451,"Barcelona, Spain",1,2.1734035,41.3850639
+751,"Barking, Essex, England",1,0.075766,51.536563
+155,"Barrie, Ontario, Canada",1,-79.6903316,44.3893556
+717,"Baton Rouge, Louisiana, United States",1,-91.1403196,30.4582829
+398,"Bay Shore, New York, United States",1,-73.2453946,40.7250986
+152,"Bayamon, Puerto Rico",1,-66.1659674,18.3691963
+480,"Beach Grove, Indiana, United States",1,-86.0899847,39.7219884
+533,"Beijing, China",3,116.4073963,39.9041999
+392,"Belem, Para, Brazil",3,-48.4901968,-1.4557794
+109,"Bellingham, Massachusets, United States",1,-71.4745881,42.0867608
+700,"Bellmore, New York, United States",1,-73.5270709,40.6687125
+500,"Belmar, New Jersey, United States",1,-74.0218037,40.1784471
+71,"Belo Horizonte, Minas Gerais, Brazil",4,-43.9352376,-19.9245018
+499,"Belton, Texas, United States",1,-97.464453,31.0560132
+119,"Bemiji, Minnesota, United States",1,-94.8858492,47.4875361
+696,"Bethel, Connecticut, United States",1,-73.4139621,41.3712283
+563,"Bethlehem, Pennsylvania, United States",1,-75.3704579,40.6259316
+185,"Bettendorf, Iowa, United States",5,-90.48344,41.56085
+496,"Beverwijk, North Holland, Netherlands",1,4.6574468,52.4869842
+522,"Biddeford, Maine, United States",1,-70.4533844,43.4925843
+445,"Biloxi, Mississippi, United States",1,-88.8853078,30.3960318
+572,"Birmingham, Alabama, United States",1,-86.80249,33.5206608
+52,"Birmingham, West Midlands, England",2,-1.890401,52.486243
+665,"Bishop Auckland, County Durham, England",1,-1.678788,54.663822
+643,"Bishop Auckland, England",1,-1.678788,54.663822
+605,"Bixby, Oklahoma, United States",1,-95.8833235,35.9420431
+591,"Bloomington, Illinois, United States",1,-88.9936873,40.4842027
+427,"Bloomington, Indiana, United States",1,-86.5263857,39.165325
+13,"Bloomington, Minnesota, United States",1,-93.2982799,44.840798
+763,"Bluefield, Virginia, United States",1,-81.2712105,37.252617
+598,"Blumenort, Manitoba, Canada",1,-96.6934526,49.6079093
+543,"Boca Raton, Florida, United States",3,-80.1289321,26.3683064
+91,"Bogota, Colombia",2,-74.072092,4.7109886
+531,"Boise, Idaho, United States",1,-116.2146068,43.6187102
+757,"Bolton, Ontario, Canada",1,-79.7306602,43.8741995
+101,"Bordentown, New Jersey, United States",1,-74.7118264,40.1462213
+77,"Boston, Massachusetts, United States",7,-71.0588801,42.3600825
+616,"Botkyrka, Stockholm, Sweden",1,17.8406582,59.1448381
+816,"Boucherville, Quebec, Canada",1,-73.4364097,45.5913698
+497,"Boulder, Colorado, United States",1,-105.2705456,40.0149856
+435,"Bountiful, Utah, United States",1,-111.880771,40.8893895
+508,"Bourne, Massachusetts, United States",1,-70.5989325,41.7412773
+554,"Boyle, Alberta, Canada",1,-112.8037965,54.5872599
+204,"Boys Ranch, Texas, United States",1,-102.2540841,35.531436
+308,"Bradley, Illinois, United States",1,-87.8611535,41.1419768
+373,"Brainerd, Minnesota, United States",1,-94.2020084,46.3526733
+458,"Brasilia, Distrito Federal, Brazil",1,-47.8825289,-15.7941569
+462,"Brasilia, Federal District, ",1,-47.8644715,-15.7997654
+62,"Brasilia, Federal District, Brazil",6,-47.8644715,-15.7997654
+304,"Bricktown, New Jersey, United States",1,-74.1371832,40.0578384
+350,"Bridgewater, Massachusetts, United States",2,-70.9750541,41.9903519
+527,"Brighton, Sussex, England",1,-0.137163,50.82253
+738,"Brisbane, Queensland, Australia",3,153.0251235,-27.4697707
+578,"Broken Arrow, Oklahoma, United States",1,-95.7974526,36.060949
+600,"Brookfield, Florida, United States",1,-82.7313424,28.0319466
+747,"Brookings, South Dakota, United States",1,-96.7983877,44.3113573
+131,"Brooklyn, New York, United States",4,-73.9441579,40.6781784
+498,"Broomfield, Colorado, United States",2,-105.0866504,39.9205411
+388,"Buena Park, California, United States",2,-117.9981387,33.8674044
+788,"Buenos Aires, Argentina",1,-58.3815591,-34.6036844
+697,"Buffalo Grove, Illinois, United States",1,-87.9631308,42.1662831
+6,"Buffalo, New York, United States",2,-78.8783689,42.8864468
+361,"Burns Lake, British Columbia, Canada",1,-125.763613,54.2334148
+568,"Busan, South Korea",2,129.0756416,35.1795543
+520,"Busan, Yeongnam, South Korea",2,128.4622444,35.1453713
+726,"Bushmills, Antrim, Northern Ireland",1,-6.52346,55.20506
+815,"Bydgoszcz, Poland",1,18.0084378,53.1234804
+538,"Cacadores, Santa Catarina, Brazil",1,-51.0124989,-26.7761609
+831,"Cahokia, Illinois, United States",1,-90.1901113,38.5708849
+381,"Calgary, Alberta, Canada",2,-114.0708459,51.0486151
+251,"California, USA",1,-119.4179324,36.778261
+37,"Campina Grande, Paraiba, Brazil",2,-35.8808337,-7.2290752
+740,"Campinas, Sao Paulo, Brazil",2,-47.0625812,-22.9098833
+452,"Campo Formoso, Bahia, Brazil",1,-40.7969149,-10.1914246
+620,"Cangzhou, Hebei, China",1,116.838834,38.304477
+230,"Canton, Illinois, United States",1,-90.0351167,40.5580945
+346,"Cape Town, Western Cape, South Africa",2,18.4240553,-33.9248685
+671,"Caracas, Venezuela",1,-66.9036063,10.4805937
+618,"Careiro da Varzea, Amazonas, Brazil",1,-59.8255324,-3.1974487
+731,"Carencro, Louisiana, United States",1,-92.0490096,30.317144
+14,"Cascavel, Parana, Brazil",1,-53.459544,-24.9578832
+820,"Castanhal, Para, Brazil",1,-47.9171616,-1.2983288
+289,"Castlerock, Washington, United States",1,-122.9076141,46.275111
+613,"Caxias do Sul, Rio Grande do Sul, Brazil",1,-51.1796683,-29.1634031
+142,"Cedar Falls, Iowa, United States",2,-92.4453161,42.5348993
+193,"Cedar Rapids, Iowa, United States",4,-91.6656232,41.9778795
+712,"Chalan Pago, Guam",1,144.7686693,13.4381741
+432,"Chandler, Arizona, USA",1,-111.8412502,33.3061605
+125,"Charlotte, North Carolina, United States",1,-80.8431267,35.2270869
+472,"Chatam, Ontario, Canada",1,-82.1910378,42.4048028
+11,"Chiba, Japan",1,140.1233063,35.6050574
+212,"Chicago, Illinois, United States",7,-87.6297982,41.8781136
+810,"Chino Hills, California, United States",1,-117.7325848,33.9898188
+660,"Chino, California, United States",1,-117.688944,34.0122346
+827,"Chone, Ecuador",1,-80.109357,-0.7140022
+396,"Chorzow, Poland",1,18.9545728,50.2974884
+612,"Cieszyn, Poland",1,18.6354709,49.7497638
+240,"Cincinnati, Ohio, United States",11,-84.5120196,39.1031182
+397,"Citrus Heights, California, United States",1,-121.2810611,38.7071247
+76,"Clarksville, Tennessee, United States",1,-87.3594528,36.5297706
+175,"Cleveland, Ohio, United States",5,-81.6943605,41.49932
+609,"Clinton, Iowa, United States",1,-90.1887379,41.8444735
+551,"Cobleskill, New York, United States",1,-74.4854172,42.677853
+67,"Coconut Creek, Florida, United States",4,-80.1789351,26.2517482
+133,"Coldwater, Michigan, United States",1,-85.0005215,41.9403263
+510,"Cole Harbour, Nova Scotia, Canada",2,-63.4534447,44.6458149
+633,"College Station, Texas, United States",1,-96.3344068,30.627977
+217,"Collinville, Illinois, United States",1,-89.9845476,38.6703266
+734,"Cologne, Germany",1,6.9602786,50.937531
+611,"Colorado Springs, Colorado, United States",3,-104.8213634,38.8338816
+556,"Columbia City, Indiana, United States",1,-85.4883127,41.1572686
+336,"Columbus, Georgia, United States",1,-84.9877094,32.4609764
+159,"Columbus, Ohio, United States",4,-82.9987942,39.9611755
+474,"Columbus, Ohio, USA",1,-82.9987942,39.9611755
+254,"Concord, California, United States",1,-122.0310733,37.9779776
+63,"Copenhagen, Denmark",1,12.5683371,55.6760968
+311,"Coral Pass, Florida, United States",1,-81.2841851,29.8561494
+583,"Cordova, Alaska, United States",1,-145.7525414,60.5424087
+761,"Corpus Christi, Texas, United States",1,-97.396381,27.8005828
+69,"Cortland, New York, United States",3,-76.1804843,42.6011813
+172,"Corvallis, Oregon, United States",1,-123.2620435,44.5645659
+314,"Costa Mesa, California, United States",1,-117.9188221,33.6412156
+70,"Cramerton, North Carolina, United States",1,-81.0717324,35.2359757
+206,"Crystal Lake, Illinois, United States",4,-88.3161965,42.2411344
+339,"Cuba, Illinois, United States",1,-90.1906768,40.4928181
+809,"Cuba, Missouri, United States",1,-91.4034833,38.0628225
+128,"Culver City, California, United States",1,-118.3964665,34.0211224
+195,"Curitiba, Parana, Brazil",7,-49.267137,-25.4289541
+93,"Curitibanos, Santa Catarina, Brazil",1,-50.5821037,-27.282855
+174,"Curwensville, Phildelphia, USA",1,NA,NA
+524,"Cuyahoga Falls, Ohio, United States",1,-81.4845585,41.1339449
+248,"Cuzco, Peru",1,-71.9674626,-13.53195
+75,"Dagestan, Russia",3,47.0949799,42.1431886
+10,"Dallas, Texas, United States",7,-96.7969879,32.7766642
+351,"Dana Point, California, United States",1,-117.6981014,33.4672256
+559,"Danville, Illinois, United States",1,-87.6300207,40.124481
+262,"Davenport, Illinois, United States",1,-90.5776367,41.5236437
+182,"Davenport, Iowa, United States",3,-90.5776367,41.5236437
+317,"Dayton, Ohio, United States",1,-84.1916069,39.7589478
+292,"Decatur, Illinois, United States",1,-88.9548001,39.8403147
+453,"Deerfield Beach, Florida, United States",1,-80.0997657,26.3184123
+94,"Delray Beach, Florida, United States",1,-80.0728201,26.4614625
+399,"Denham Springs, Louisiana, United States",2,-90.9562125,30.4868564
+108,"Denver, Colorado, United States",8,-104.990251,39.7392358
+823,"Derbent, Russia",1,48.2890907,42.0674251
+414,"Des Moines, Iowa, United States",7,-93.6091064,41.6005448
+179,"Diamond Head, Mississippi, USA",1,-89.3639378,30.3946392
+844,"Dnipropetrovsk, Ukraine",1,35.046183,48.464717
+787,"Dolton, Illinois, United States",1,-87.607268,41.6389236
+558,"Doncaster, England",1,-1.128462,53.52282
+691,"Doncaster, South Yorkshire, England",1,-1.128462,53.52282
+692,"Doncaster, Yorkshire, England",1,-1.128462,53.52282
+536,"Donegal, Ireland",1,-8.1096142,54.653827
+518,"Dores do Indaia, Minas Gerais, Brazil",1,-45.596316,-19.4608252
+465,"Douglasville, Pennsylvania, United States",1,-75.7262916,40.2581117
+394,"Dubbo, New South Wales, Australia",1,148.6329645,-32.2315018
+42,"Dublin, Ireland",3,-6.2603097,53.3498053
+479,"Dublin, Leinster, Ireland",4,-6.2603097,53.3498053
+243,"Duque de Caxias, Rio de Janeiro, Brazil",1,-43.3053106,-22.7862985
+227,"Eagle Creek, Oregon, United States",1,-122.3588744,45.3575239
+375,"Eagle River, Alaska, United States",1,-149.5680499,61.3293186
+306,"East Chicago, Indiana, United States",1,-87.4547635,41.6392024
+202,"East Palo Alto, California, United States",1,-122.1410751,37.4688273
+650,"East Peoria, Illinois, United States",1,-89.5800978,40.666149
+679,"Edinburg, Texas, United States",1,-98.1633432,26.3017374
+334,"Edmonton, Alberta, Canada",3,-113.4909267,53.544389
+17,"Eindhoven, Netherlands",1,5.4697225,51.441642
+95,"El Agustino, Lima, Peru",1,-77.0006529,-12.0479963
+653,"El Paso, Texas, United States",1,-106.4850217,31.7618778
+525,"Elgin, Minnesota, United States",1,-92.2515588,44.1302435
+296,"Elk Grove, California, United States",1,-121.3716178,38.4087993
+4,"Encinitas, California, United States",1,-117.2919818,33.0369867
+537,"Englewood, Colorado, United States",1,-104.9877597,39.6477653
+592,"Englewood, New Jersey, United States",1,-73.9726381,40.8928771
+349,"Enumclaw, Washington, United States",1,-121.9915003,47.2042681
+837,"Epping, Victoria, Australia",1,145.01,-37.638
+596,"Erbil, Kurdistan Region, Iraq",1,44.0088697,36.2062933
+766,"Erdington, West Midlands, England",1,-1.8446106,52.5219314
+684,"Escada, Pernambuco, Brazil",1,-35.2243997,-8.3571351
+569,"Escondido, California, United States",2,-117.086421,33.1192068
+579,"Eugene, Oregon, United States",1,-123.0867536,44.0520691
+590,"Evansville, Indiana, United States",1,-87.5710898,37.9715592
+767,"Ewa Beach, Hawaii, United States",1,-158.0089992,21.313149
+38,"Eyota, Minnesota, United States",1,-92.2305556,43.9902778
+147,"Fairbanks, Alaska, United States",1,-147.7163889,64.8377778
+207,"Fairfield, Idaho, United States",1,-114.7917279,43.3465675
+577,"Fall River, Massachusetts, United States",1,-71.1550451,41.7014912
+442,"Fargo, North Dakota, United States",3,-96.7898034,46.8771863
+235,"Farmington, New Mexico, United States",2,-108.2186856,36.7280583
+171,"Fayettsville, North Carolina, USA",1,-78.8783585,35.0526641
+178,"Fayettville, North Carolina, USA",1,-78.8783585,35.0526641
+86,"Felixstowe, Suffolk, England",1,1.351255,51.961726
+342,"Florianopolis, Santa Catarina, Brazil",5,-48.5480499,-27.5953778
+148,"Folsom, California, United States",1,-121.1760583,38.6779591
+690,"Fontana, California, United States",1,-117.435048,34.0922335
+302,"Fort Bragg, North Carolina, United States",1,-79.0079949,35.1414552
+84,"Fort Lauderdale, Florida, United States",3,-80.1373174,26.1224386
+300,"Fort Myers, Florida, United States",1,-81.8723084,26.640628
+348,"Fort Wayne, Indiana, United States",2,-85.1393513,41.079273
+555,"Fort Worth, Texas, United States",1,-97.3307658,32.7554883
+309,"Fortaleza, Ceara, Brazil",10,-38.5266704,-3.7318616
+772,"Francisco Beltrao, Parana, Brazil",1,-53.1749726,-26.0404504
+750,"Fredericktown, Missouri, United States",1,-90.2940069,37.5597754
+780,"Freeport, New York, United States",1,-73.5831835,40.6576022
+703,"Freiburg, Germany",1,7.8421043,47.9990077
+20,"Fresno, California, United States",2,-119.7725868,36.7468422
+385,"Fukuyama, Hiroshima, Japan",1,133.3623127,34.4858993
+783,"Gaffney, South Carolina, United States",1,-81.6498195,35.0717945
+146,"Garden Grove, California, United States",2,-117.9379952,33.7742692
+393,"Garland, Texas, United States",1,-96.6388833,32.912624
+644,"Gdansk, Poland",1,18.6466384,54.3520252
+743,"Gdynia, Poland",1,18.5305409,54.5188898
+450,"Geelong, Victoria, Australia",1,144.3617186,-38.1499181
+826,"Glasgow, Scotland",1,-4.251806,55.864237
+44,"Glendale, Arizona, United States",3,-112.1859866,33.5386523
+377,"Glendale, California, United States",2,-118.255075,34.1425078
+319,"Gloucester, Gloucestershire, England",1,-2.238156,51.8642449
+745,"Glyfada, Attica, Greece",1,23.7692328,37.879787
+506,"Goiania, Goias, Brazil",2,-49.2647885,-16.6868824
+762,"Gold Coast, Queensland, Australia",1,153.4,-28.016667
+756,"Goshen, Indiana, United States",1,-85.8344383,41.5822716
+571,"Gothenburg, Sweden",3,11.97456,57.70887
+73,"Governador Valadares, Minas Gerais, Brazil",1,-41.9559233,-18.8549317
+764,"Grand Rapids, Michigan, United States",2,-85.6680863,42.9633599
+288,"Granite City, Illinois, United States",4,-90.1487199,38.7014389
+24,"Granite City, Illinois, USA",1,-90.1487199,38.7014389
+369,"Grass Valley, California, United States",1,-121.0610606,39.2190608
+199,"Greeley, Colorado, United States",2,-104.7091322,40.4233142
+493,"Greenwood, Indiana, United States",1,-86.1066526,39.6136578
+293,"Gresham, Oregon, United States",1,-122.4302013,45.5001357
+64,"Grozny, Chechnya, Russia",2,45.6814856,43.3168796
+48,"Grozny, Russia",1,45.6814856,43.3168796
+50,"Guadalajara, Jalisco, Mexico",2,-103.3496092,20.6596988
+640,"Guaruja, Sao Paulo, Brazil",1,-46.2568758,-23.9949104
+689,"Gudalajara, Jalisco, Mexico",1,-103.3496092,20.6596988
+57,"Gumi, Gyeongsangbuk-do, South Korea",1,128.3445734,36.119485
+670,"Gyeongju, North Gyeongsang, South Korea",1,129.2247477,35.8561719
+669,"Hackettstown, New Jersey, United States",1,-74.8290555,40.8539879
+511,"Halifax, Nova Scotia, Canada",2,-63.5752387,44.6487635
+379,"Hamilton, Ontario, Canada",2,-79.8711024,43.2557206
+307,"Hammond, Indiana, United States",1,-87.5000412,41.5833688
+287,"Handa, Aichi, Japan",1,136.937961,34.8917179
+680,"Hanford, California, United States",1,-119.6456844,36.3274502
+485,"Harrah, Oklahoma, United States",1,-97.1636408,35.4895085
+478,"Harrisburg, Pennsylvania, United States",3,-76.8867008,40.2731911
+183,"Harvey, Louisiana, United States",1,-90.0772944,29.9035387
+723,"Havana, Cuba",2,-82.3665956,23.1135925
+456,"Hawaii, United States",1,-155.5827818,19.8967662
+785,"Hawthorne, California, United States",1,-118.3525748,33.9164032
+661,"Hazel Park, Michigan, United States",1,-83.1040912,42.4625362
+652,"Helsingborg, Sweden",1,12.6945121,56.0464674
+492,"Helsinki, Finland",1,24.938379,60.1698557
+173,"Helsinki, Finnland",1,24.938379,60.1698557
+27,"Hesperia, California, United States",2,-117.3008784,34.4263886
+264,"Higashikurume, Tokyo, Japan",1,139.5297392,35.7580477
+208,"Hillsboro, Illinois, United States",1,-89.4936989,39.1611586
+25,"Hillsborough, Illinois, USA",1,-89.4936989,39.1611586
+266,"Hilo, Hawaii, United States",4,-155.0884869,19.7070942
+581,"Hobart, Indiana, United States",1,-87.2550353,41.5322592
+730,"Hohhot, Inner Mongolia, China",1,111.749995,40.842356
+595,"Hollidaysburg, Pennsylvania, United States",1,-78.3889024,40.4272949
+778,"Hollis, New Hampshire, United States",1,-71.5895344,42.7425166
+408,"Hollywood, California, United States",1,-118.3286614,34.0928092
+789,"Homestead, Florida, United States",1,-80.4775569,25.4687224
+795,"Homewood, Alabama, United States",1,-86.8008228,33.4717732
+104,"Honolulu, Hawaii, United States",7,-157.8583333,21.3069444
+66,"Houston, Texas, United States",11,-95.3698028,29.7604267
+748,"Hove, East Sussex, England",1,-0.168749,50.8279319
+803,"Howell, New Jersey, United States",1,-74.2082671,40.1645785
+312,"Hudderfield, England",1,-1.785035,53.645792
+126,"Huntington Beach, California, United States",11,-117.9988026,33.6594835
+790,"Hyvinkaa, Uusimaa, Finland",1,24.8580797,60.6299525
+244,"Ibaraki, Japan",2,140.4467935,36.3418112
+586,"Ibitinga, Sao Paulo, Brazil",1,-48.8323618,-21.7567077
+258,"Iles de la Madeleine, Quebec, Canada",1,-61.9011978,47.3877013
+516,"Ilha Solteira, Sao Paulo, Brazil",1,-51.3487221,-20.4323064
+267,"Inashiki, Ibaraki, Japan",1,140.3036454,35.97294
+686,"Independence, Ohio, United States",1,-81.6379033,41.3686645
+78,"Indianapolis, Indiana, United States",10,-86.158068,39.768403
+211,"Iowa City, Iowa, USA",1,-91.5301683,41.6611277
+436,"Ipatinga, Minas Gerais, Brazil",1,-42.5480125,-19.4707617
+132,"Irmo, South Carolina, United States",1,-81.1831513,34.0859829
+540,"Irvine, California, United States",1,-117.8265049,33.6845673
+455,"Isahaya, Nagasaki, Japan",1,130.0530952,32.8434379
+166,"Isfahan, Iran, Islamic Republic of",1,51.6679826,32.6546275
+560,"Itapemirim, Espirito Santo, Brazil",1,-40.7817933,-20.8999339
+363,"Jackson, New Jersey, United States",2,-74.3587473,40.0918895
+200,"Jacksonville, Florida, United States",1,-81.655651,30.3321838
+490,"Jacksonville, North Carolina, United States",1,-77.4302414,34.7540524
+639,"Jales, Sao Paulo, Brazil",1,-50.5490728,-20.2686072
+594,"Januaria, Minas Gerais, Brazil",1,-44.3642956,-15.4806094
+41,"Jefferson, Iowa, United States",1,-94.3774232,42.0172457
+246,"Jefferson, Ohio, United States",1,-80.7698066,41.7386662
+139,"Jersey City, New Jersey, United States",1,-74.0776417,40.7281575
+278,"Joao Pessoa, Paraiba, Brazil",1,-34.8450118,-7.1194958
+793,"Johannesburg, Gauteng, South Africa",1,28.0473051,-26.2041028
+802,"Johnstown, Pennsylvania, United States",1,-78.9219698,40.3267407
+467,"Joinville, Santa Catarina, Brazil",1,-48.8463832,-26.3044084
+359,"Kabul, Afghanistan",1,69.207486,34.5553494
+529,"Kagoshima, Japan",1,130.5571158,31.5965535
+276,"Kailua, Hawaii, United States",4,-157.7394444,21.4022222
+280,"Kalinin City, Armenia",1,44.285778,41.1159648
+501,"Kansas City, Kansas, United States",1,-94.6274636,39.114053
+228,"Kansas City, Kansas, USA",1,-94.6274636,39.114053
+481,"Kansas City, Missouri, United States",1,-94.5785667,39.0997265
+841,"Katy, Texas, United States",1,-95.8243956,29.7857853
+360,"Kawasaki, Kanagawa, Japan",1,139.7024039,35.5298198
+725,"Keller, Texas, United States",1,-97.229298,32.9341893
+477,"Kelowna, British Columbia, Canada",4,-119.4960106,49.8879519
+383,"Kenora, Ontario, Canada",1,-94.4893924,49.7670416
+256,"Kenosha, Wisconsin, United States",2,-87.8211854,42.5847425
+833,"Kiev, Ukraine",1,30.5234,50.4501
+635,"Kildare, County Kildare, Ireland",1,-6.9095683,53.1589342
+60,"Kirkcaldy, Fife, Scotland",1,-3.158137,56.1168249
+716,"Kirkland, Washington, United States",2,-122.2059833,47.6768927
+682,"Knoxville, Tennessee, United States",2,-83.9207392,35.9606384
+424,"Krakow, Poland",1,19.9449799,50.0646501
+187,"Kusatsu, Shiga, Japan",1,135.959936,35.0131341
+261,"La Paz, El Salvador",1,-88.9796776,13.495364
+775,"La Plata, Argentina",1,-57.9535657,-34.9204948
+275,"Lafayette, Louisiana, United States",4,-92.0198427,30.2240897
+323,"Lake Forest, California, United States",2,-117.6861023,33.6469437
+607,"Lake Station, Indiana, United States",1,-87.2389246,41.5750369
+250,"Lakewood, California, United States",1,-118.1339563,33.8536269
+299,"Lancaster, Ohio, United States",1,-82.5993294,39.7136754
+223,"Laredo, Texas, United States",1,-99.4803241,27.5305671
+18,"Las Vegas, Nevada, United States",19,-115.1398296,36.1699412
+347,"Las Vegas, Nevada, USA",1,-115.1398296,36.1699412
+674,"Laval, Quebec, Canada",1,-73.712409,45.6066487
+659,"Layton, Utah, United States",1,-111.9710529,41.0602216
+284,"Le Celle St. Clous, Haut de Seine, France",1,2.132504,48.849766
+647,"Lee's Summit, Missouri, United States",2,-94.3821724,38.9108408
+658,"Lehighton, Pennsylvania, United States",1,-75.7138008,40.8337029
+535,"Leicester, Leicestershire, England",1,-1.1397592,52.6368778
+437,"Leicestershire, East Midlands, England",1,-1.2052126,52.772571
+391,"Leiden, South Holland, Netherlands",1,4.4970097,52.1601144
+732,"Leigh, Wigan, England",1,-2.518727,53.496115
+120,"Lemoa, Spain",1,-2.7751137,43.208637
+382,"Lethbridge, Alberta, Canada",2,-112.84184,49.69349
+630,"Lexington, Kentucky, United States",1,-84.5037164,38.0405837
+423,"Liberty, Missouri, United States",1,-94.4191177,39.2461138
+51,"Lima, Peru",1,-77.042754,-12.0463731
+678,"Limoeiro do Norte, Ceara, Brazil",1,-38.0850339,-5.1443118
+410,"Lincoln, California, United States",1,-121.2930079,38.891565
+553,"Lincolnville, Maine, United States",1,-69.0087018,44.2811973
+664,"Lindenhurst, New York, United States",1,-73.3734547,40.6867667
+782,"Lindenwood, Missouri, United States",1,-90.503717,38.787519
+9,"Lindon, Utah, United States",1,-111.7207608,40.3432857
+710,"Linton, North Dakota, United States",1,-100.2328916,46.2666567
+610,"Little Rock, Arkansas, United States",1,-92.2895948,34.7464809
+213,"Littleton, Colorado, United States",1,-105.0166498,39.613321
+444,"Liverpool, England",5,-2.9915726,53.4083714
+65,"Liverpool, Merseyside, England",3,-2.9915726,53.4083714
+167,"Livonia, Michigan, USA",1,-83.3527097,42.36837
+7,"Lodi, California, United States",1,-121.2722194,38.1341477
+87,"Lodz, Poland",4,19.4559833,51.7592485
+29,"London, England",5,-0.1277583,51.5073509
+386,"London, Greater London, England",2,-0.1277583,51.5073509
+344,"London, Ontario, Canada",4,-81.2452768,42.9849233
+80,"Long Island, New York, United States",5,-73.134961,40.789142
+112,"Los Angeles, California, United States",11,-118.2436849,34.0522342
+623,"Louisville, Kentucky, United States",1,-85.7584557,38.2526647
+526,"Loveland, Ohio, United States",1,-84.263826,39.2689476
+273,"Lowell, Massachusetts, United States",1,-71.3161718,42.6334247
+222,"Luanda, Luanda, Angola",1,13.2894368,-8.8399876
+773,"Lubbock, Texas, United States",1,-101.8551665,33.5778631
+838,"Lublin, Poland",1,22.5684463,51.2464536
+603,"Ludlow, Massachusetts, United States",1,-72.475919,42.1600936
+728,"Macae, Rio de Janeiro, Brazil",1,-41.7827891,-22.3836904
+707,"Macapa, Amapa, Brazil",2,-51.070535,0.0355735
+417,"Madera, California, United States",1,-120.0607176,36.9613356
+629,"Makaha, Hawaii, United States",1,-158.2206477,21.4634328
+49,"Makhachkala, Dagestan, Russia",3,47.5126285,42.9666308
+715,"Makhachkala, Republic of Dagestan, Russia",2,47.5126285,42.9666308
+56,"Makhachkala, Russia",1,47.5126285,42.9666308
+687,"Malmo, Sweden",1,13.003822,55.604981
+562,"Manacapuru, Amazonas, Brazil",2,-60.6319066,-3.2897192
+834,"Managua, Nicaragua",1,-86.2361744,12.1149926
+769,"Manassas, Virginia, United States",1,-77.4752667,38.7509488
+405,"Manaus, Amazonas, Brazil",4,-60.0217314,-3.1190275
+356,"Manchester, England",3,-2.2426305,53.4807593
+708,"Manchester, Greater Manchester, England",1,-2.2426305,53.4807593
+824,"Manchester, New Hampshire, United States",1,-71.4547891,42.9956397
+753,"Manhattan, Kansas, United States",1,-96.5716694,39.1836082
+337,"Manhattan, New York, USA",1,-73.9712488,40.7830603
+422,"Mannheim, Germany",1,8.4660395,49.4874592
+395,"Mansfield, Ohio, United States",1,-82.5154471,40.75839
+515,"Marajo, Para, Brazil",1,-49.6393095,-0.9401984
+566,"Marietta, Georgia, United States",1,-84.5499327,33.952602
+807,"Marlton, New Jersey, United States",1,-74.9218324,39.8912248
+573,"Maroubra, New South Wales, Australia",1,151.2437,-33.9495
+447,"Matanzas, Cuba",1,-81.5322149,23.0303395
+546,"Matsuyama, Ehime, Japan",1,132.7655752,33.8391574
+428,"Maui, Hawaii, United States",2,-156.3319253,20.7983626
+587,"McKinney, Texas, United States",1,-96.6397822,33.1972465
+370,"Medford, Oregon, United States",1,-122.8755949,42.3265152
+729,"Melbourne, Victoria, Australia",2,144.9630576,-37.8136276
+709,"Melksham, Wiltshire, England",1,-2.137629,51.370447
+237,"Memphis, Tennessee, United States",1,-90.0489801,35.1495343
+651,"Merrick, New York, United States",1,-73.551516,40.6628795
+143,"Mesa, Arizona, United States",2,-111.8314724,33.4151843
+232,"Metairie, Louisiana, USA",2,-90.1528519,29.9840922
+813,"Methuen, Massachusetts, United States",1,-71.1908924,42.7262016
+649,"Mexico City, Federal District, Mexico",2,-99.133208,19.4326077
+45,"Mexico City, Mexico",2,-99.133208,19.4326077
+61,"Miami, Florida, United States",9,-80.1917902,25.7616798
+298,"Milford, Massachusetts, United States",1,-71.5163049,42.1398577
+220,"Milwaukee, Wisconsin, United States",8,-87.9064736,43.0389025
+83,"Mineral Wells, Texas, United States",1,-98.1128223,32.8084605
+215,"Minneapolis, Minnesota, United States",5,-93.2650108,44.977753
+313,"Minneapolis, Minnesota, USA",1,-93.2650108,44.977753
+225,"Minsk, Belarus",1,27.5615244,53.9045398
+575,"Mishawaka, Indiana, United States",1,-86.1586156,41.6619927
+140,"Mission Viejo, California, United States",4,-117.6581562,33.5968913
+327,"Mississauga, Ontario, Canada",3,-79.6441198,43.5890452
+711,"Mississippi, United States",1,-89.3985283,32.3546679
+454,"Miura, Kanagawa, Japan",1,139.6207704,35.1441706
+638,"Modesto, California, United States",1,-120.9968782,37.6390972
+667,"Monterrey, Mexico",1,-100.3161126,25.6866142
+829,"Montes Claros, Minas Gerais, Brazil",1,NA,NA
+259,"Montreal, Quebec, Canada",7,-73.567256,45.5016889
+519,"Monza, Italy",1,9.2744485,45.5845001
+149,"Moorehead, Minnesota, United States",2,-96.7678039,46.8737648
+677,"Morden, England",1,-0.19446,51.394943
+137,"Morganton, North Carolina, United States",1,-81.6848188,35.7454071
+505,"Moscow Mills, Missouri, United States",1,-90.9181916,38.9478267
+30,"Moscow, Russia",3,37.6173,55.755826
+367,"Mossoro, Rio Grande do Norte, Brazil",3,-37.3477805,-5.1841285
+668,"Mount Pleasant, Texas, United States",1,-94.968269,33.1567863
+443,"Muncie, Indiana, United States",1,-85.3863599,40.1933767
+150,"Murrieta, California, United States",1,-117.2139232,33.5539143
+624,"Muscatine, Iowa, United States",1,-91.0432051,41.424473
+59,"NA, NA",2,18.49041,-22.95764
+550,"Nagano, Japan",1,138.1947709,36.6485829
+224,"Nagaoka, Niigata, Japan",1,138.8512772,37.4462652
+21,"Nagoya, Aichi, Japan",2,136.906398,35.1814464
+760,"Nalchik, Russia",1,43.6045132,43.4949918
+366,"Nampa, Idaho, United States",1,-116.5634624,43.5407172
+115,"Nancy, France",1,6.184417,48.692054
+153,"Napa, California, United States",1,-122.286865,38.2975381
+403,"Naples, Florida, United States",1,-81.7948103,26.1420358
+469,"Nashville, Tennessee, United States",2,-86.7816016,36.1626638
+567,"Natal, Rio Grande do Norte, Brazil",4,-35.200916,-5.7792569
+277,"Nebraska, USA",1,-99.9018131,41.4925374
+98,"New Brunswick, New Jersey, United States",1,-74.4518188,40.4862157
+374,"New Hyde Park, New York, United States",1,-73.6879082,40.7351018
+196,"New Orleans, Louisiana, United States",3,-90.0715323,29.9510658
+35,"New York City, New York, United States",3,-74.0059413,40.7127837
+163,"New York City, New York, USA",1,-74.0059413,40.7127837
+806,"New York, New York, United States",2,-74.0059413,40.7127837
+279,"New York, USA",2,-74.0059413,40.7127837
+99,"Newmarket, Ontario, Canada",1,-79.461256,44.059187
+354,"Newport Beach, California, United States",2,-117.9298493,33.6188829
+430,"Niagara Falls, New York, United States",1,-79.0377388,43.0962143
+124,"Niagara Falls, Ontario, Canada",1,-79.0849436,43.0895577
+315,"Nice, France",1,7.2619532,43.7101728
+218,"Niigata, Japan",1,139.0364126,37.9161924
+503,"Nilopolis, Rio de Janeiro, Brazil",1,-43.4194095,-22.8098164
+168,"Niskayuna, New York, United States",1,-73.8914407,42.8000049
+407,"Niteroi, Rio de Janeiro, Brazil",2,-43.1152211,-22.8858975
+129,"Nizhny Novgorod, Russia",1,43.9360589,56.2965039
+776,"Norfolk, Virginia, United States",1,-76.2858726,36.8507689
+564,"Norman, Oklahoma, United States",1,-97.4394777,35.2225668
+601,"North Brunswick, New Jersey, United States",1,-74.4766712,40.4525163
+106,"North Hollywood, California, United States",4,-118.3812562,34.187044
+389,"North Platte, Nebraska, United States",1,-100.7601454,41.1402759
+440,"Nottingham, East Midlands, England",1,-1.1581086,52.9547832
+330,"Nottingham, England",1,-1.1581086,52.9547832
+636,"Nottingham, Nottinghamshire, England",1,-1.1581086,52.9547832
+719,"Nova Friburgo, Rio de Janeiro, Brazil",1,-42.5340796,-22.2887261
+768,"Numazu, Shizuoka, Japan",1,138.8634925,35.0955842
+528,"Oahu, Hawaii, United States",1,-158.0000565,21.4389123
+548,"Oakhurst, New Jersey, United States",1,-74.023593,40.2613515
+698,"Ocala, Florida, United States",1,-82.1400923,29.1871986
+177,"Ocean Springs, Mississippi, United States",1,-88.8278057,30.4113097
+840,"Oceanside, New York, United States",1,-73.6401296,40.6387141
+704,"Offenbach, Germany",1,8.7760843,50.0956362
+134,"Oklahoma City, Oklahoma, United States",3,-97.5164276,35.4675602
+688,"Olomouc, Czech Republic",1,17.2508787,49.593778
+88,"Olsztyn, Poland",1,20.4801193,53.778422
+425,"Olympia, Washington, United States",2,-122.9006951,47.0378741
+3,"Omaha, Nebraska, United States",11,-95.9979883,41.2523634
+157,"Omaha, Nebraska, USA",1,-95.9979883,41.2523634
+1,"Omiya, Saitama, Japan",1,139.6287539,35.9064871
+145,"Ontario, California, United States",1,-117.6508876,34.0633443
+341,"Ontario, Canada",1,-85.3232139,51.253775
+641,"Opole, Poland",1,17.9212976,50.6751067
+438,"Orange County, California, United States",1,-117.8311428,33.7174708
+260,"Orange, California, United States",1,-117.8531007,33.7879139
+113,"Orem, Utah, United States",4,-111.6946475,40.2968979
+265,"Orlando, Florida, United States",6,-81.3792365,28.5383355
+744,"Orneta, Poland",1,20.13023,54.11538
+79,"Osaka, Japan",4,135.5021651,34.6937378
+514,"Oskaloosa, Iowa, United States",1,-92.6493595,41.2916728
+557,"Oslo, Norway",1,10.7522454,59.9138688
+305,"Oslo, Oslo, Norway",1,10.7522454,59.9138688
+117,"Oss, Holland",1,5.5786314,51.7835618
+491,"Ottawa, Ontario, Canada",2,-75.6971931,45.4215296
+646,"Oxnard, California, United States",1,-119.1770516,34.1975048
+161,"Pacific, Missouri, United States",2,-90.7415194,38.4819976
+461,"Pahrump, Nevada, United States",1,-115.9839147,36.2082943
+446,"Palm Springs, California, United States",2,-116.5452921,33.8302961
+233,"Palo Alto, California, United States",1,-122.1430195,37.4418834
+694,"Paranagua, Parana, Brazil",1,-48.5229975,-25.5165725
+285,"Paris, France",4,2.3522219,48.856614
+89,"Parral, Chihuahua, Mexico",1,-105.6666166,26.9317835
+463,"Paterson, New Jersey, United States",1,-74.171811,40.9167654
+791,"Peabody, Massachusetts, United States",1,-70.9286609,42.5278731
+43,"Pelotas, Rio Grande do Sul, Brazil",1,-52.3375886,-31.7653989
+720,"Pembroke, Massachusetts, United States",1,-70.8092,42.0714925
+413,"Penrith, New South Wales, Australia",1,150.7,-33.75
+735,"Perrysburg, Ohio, United States",1,NA,NA
+421,"Perth, Western Australia, Australia",3,115.8604572,-31.9505269
+415,"Philadelphia, Pennsylvania, United States",4,-75.1652215,39.9525839
+5,"Phoenix, Arizona, United States",15,-112.0740373,33.4483771
+340,"Pikeville, Kentucky, United States",1,-82.5187629,37.4792672
+584,"Pinhais, Parana, Brazil",1,-49.1931448,-25.4434411
+257,"Piqua, Ohio, United States",1,-84.2424449,40.1447732
+821,"Pirapora do Bom Jesus, Sao Paulo, Brazil",1,-46.9995522,-23.3969772
+301,"Plainview, Texas, United States",1,-101.7068417,34.1847936
+294,"Playa del Carmen, Quintana Roo, Mexico",1,-87.0738851,20.6295586
+722,"Pleasant Hill, California, United States",1,-122.0607963,37.9479786
+353,"Pleasant Prairie, Wisconsin, United States",1,-87.9334118,42.5530753
+663,"Plymouth, Massachusetts, United States",1,-70.6672621,41.9584457
+329,"Point Pleasant, New Jersey, United States",1,-74.0681931,40.0831714
+28,"Pomona, California, United States",1,-117.7499909,34.055103
+331,"Pompano Beach, Florida, United States",1,-80.1247667,26.2378597
+580,"Port Colborne, Ontario, Canada",1,-79.2508558,42.8865204
+297,"Port Hueneme, California, United States",1,-119.1951074,34.1477829
+216,"Port Moody, British Columbia, Canada",1,-122.8677562,49.2849107
+283,"Portage, Indiana, United States",3,-87.1761455,41.5758707
+534,"Porterville, California, United States",2,-119.0167679,36.06523
+310,"Portland, Maine, United States",1,-70.2553259,43.661471
+371,"Portland, Oregon, United States",5,-122.6764816,45.5230622
+404,"Porto Alegre, Rio Grande do Sul, Brazil",1,-51.2176584,-30.0346471
+409,"Portsmouth, Hampshire, England",1,-1.0879769,50.8197675
+539,"Poway, California, United States",1,-117.0358646,32.9628232
+798,"Prague, Czech Republic",1,14.4378005,50.0755381
+800,"Price, Utah, United States",1,-110.8107148,39.5994095
+333,"Prince George, British Columbia, Canada",1,-122.7496693,53.9170641
+582,"Prole, Iowa, United States",1,-93.7269618,41.4091462
+588,"Provo, Utah, United States",1,-111.6585337,40.2338438
+705,"Puyallup, Washington, United States",1,-122.2928974,47.1853785
+380,"Quebec City, Quebec, Canada",1,-71.2079809,46.8138783
+290,"Racine, Wisconsin, United States",2,-87.7828523,42.7261309
+599,"Radcliff, Kentucky, United States",1,-85.9491298,37.8403456
+122,"Rahway, New Jersey, United States",1,-74.2776468,40.6081591
+47,"Ramsey, New Jersey, United States",1,-74.1409771,41.0573188
+332,"Rancho Cucamonga, California, United States",3,-117.5931084,34.1063989
+419,"Recife, Pernambuco, Brazil",1,-34.8769643,-8.0475622
+621,"Redlands, California, United States",2,-117.1825381,34.0555693
+770,"Redondo Beach, California, United States",1,-118.3884078,33.8491816
+203,"Redwood, California, United States",1,-122.2363548,37.4852152
+796,"Reinholds, Pennsylvania, United States",1,-76.1154669,40.2670462
+245,"Retchisa, Belarus",1,NA,NA
+608,"Reykjavik, Iceland",1,-21.8174393,64.1265206
+737,"Ribeirao Pires, Sao Paulo, Brazil",1,-46.4062503,-23.7071623
+416,"Ribeirao Preto, Sao Paulo, Brazil",2,-47.8102452,-21.170511
+794,"Richmond, Kentucky, United States",1,-84.2946539,37.7478572
+657,"Richmond, Virginia, United States",1,-77.4360481,37.5407246
+58,"Riga, Latvia",2,24.1051864,56.9496487
+8,"Rio De Janeiro, Brazil",47,-43.1728965,-22.9068467
+642,"Riverside, California, United States",2,-117.3961564,33.9533487
+320,"Rochester, Minnesota, United States",1,-92.4801989,44.0121221
+234,"Rochester, New York, United States",2,-77.6109219,43.16103
+221,"Rock Island, Illinois, United States",1,-90.5787476,41.5094771
+602,"Rockford, Illinois, United States",1,-89.0939952,42.2711311
+561,"Rockland, Massachusetts, United States",1,-70.9161551,42.1306563
+846,"Rockton, Illinois, United States",1,-89.0723317,42.4525157
+357,"Rome, Lazio, Italy",1,12.4963655,41.9027835
+40,"Rondonopolis, Mato Grosso, Brazil",1,-54.6387369,-16.4654526
+338,"Roselle, Illinois, United States",1,-88.0797933,41.9847504
+387,"Rostov-on-don, Russia",1,39.701505,47.2357137
+402,"Round Lake, Illinois, United States",1,-88.0934145,42.353355
+615,"Sacaramento, California, United States",1,-121.4943996,38.5815719
+411,"Sacramento, California, United States",6,-121.4943996,38.5815719
+771,"Sagamihara, Kanagawa, Japan",1,139.3731765,35.5714621
+549,"Salinas, California, United States",1,-121.6555013,36.6777372
+544,"Sallisaw, Oklahoma, United States",1,-94.7874463,35.4603711
+335,"Salt Lake City, Utah, United States",4,-111.8910474,40.7607793
+494,"Salvador, Bahia, Brazil",8,-38.502304,-12.9730401
+165,"San Antonio, Texas, United States",3,-98.4936282,29.4241219
+90,"San Bernardino, California, United States",1,-117.2897652,34.1083449
+33,"San Diego, California, United States",21,-117.1610838,32.715738
+249,"San Francisco, California, United States",5,-122.4194155,37.7749295
+160,"San Jose, California, United States",10,-121.8863286,37.3382082
+238,"San Jose, California, USA",1,-121.8863286,37.3382082
+192,"San Lorenzo, California, USA",1,-122.1244088,37.6810422
+19,"San Luis Obispo, California, ",1,-120.6596156,35.2827524
+189,"San Luis Obispo, California, United States",3,-120.6596156,35.2827524
+252,"San Luis Obsipo, California, United States",2,-120.6596156,35.2827524
+180,"Sanford, North Carolina, USA",1,-79.1802994,35.4798757
+138,"Santa Ana, California, United States",3,-117.867653,33.7454725
+839,"Santa Cruz, Bolivia",1,-63.1560853,-17.8145819
+253,"Santa Cruz, California, United States",2,-122.0307963,36.9741171
+345,"Santa Fe, New Mexico, United States",3,-105.937799,35.6869752
+201,"Santa Maria, California, United States",1,-120.4357191,34.9530337
+26,"Santa Monica, California, United States",2,-118.4911912,34.0194543
+449,"Santa Rosa, California, United States",5,-122.7140548,38.440429
+487,"Santana de Parnaiba, Sao Paulo, Brazil",1,-46.9226576,-23.4429961
+741,"Santo Andre, Sao Paulo, Brazil",2,-46.5436003,-23.6742228
+15,"Sao Paulo, Brazil",2,-46.6333094,-23.5505199
+55,"Sao Paulo, Sao Paulo, Brazil",9,-46.6333094,-23.5505199
+466,"Sarajevo, Bosnia and Herzegovina",1,18.4130763,43.8562586
+589,"Saskatoon, Saskatchewan, Canada",1,-106.6700458,52.1332144
+749,"Saugerties, New York, United States",2,-73.9529126,42.0775906
+672,"Schaumburg, Illinois, United States",2,-88.0834059,42.0333607
+116,"Schenectady, New York, United States",1,-73.9395687,42.8142432
+123,"Scottsdale, Arizona, United States",3,-111.9260519,33.4941704
+176,"Seattle, Washington, United States",7,-122.3320708,47.6062095
+565,"Seoul, South Korea",3,126.9779692,37.566535
+625,"Seville, Andalusia, Spain",1,-5.9844589,37.3890924
+154,"Shakopee, Minnesota, United States",1,-93.5272861,44.7973962
+662,"Shinagawa, Tokyo, Japan",1,139.7301861,35.6092261
+632,"Shreveport, Louisiana, United States",1,-93.7501789,32.5251516
+151,"Sierra Vista, Arizona, United States",1,-110.2772856,31.5455001
+170,"Simi Valley, California, United States",2,-118.781482,34.2694474
+759,"Simpsonville, South Carolina, United States",1,-82.2542834,34.7370639
+32,"Sioux Falls, South Dakota, United States",2,-96.7311034,43.5445959
+695,"Six-Fours-les-Plages, France",1,5.839225,43.093062
+263,"Slidell, Lousiana, United States",1,-89.7811745,30.2751945
+343,"Sobralia, Minas Gerais, Brazil",1,-42.1002015,-19.2349466
+81,"Sochi, Krasnodar Krai, Russia",1,39.7341543,43.6028079
+198,"Sofia, Bulgaria",1,23.3218675,42.6977082
+521,"Sorocaba, Sao Paulo, Brazil",2,-47.4525944,-23.5015338
+585,"Soure, Para, Brazil",1,-48.5178371,-0.7284713
+441,"South Auckland, Auckland, New Zealand",1,174.7575179,-36.8592614
+634,"South Bend, Indiana, United States",1,-86.2519898,41.6763545
+502,"Southampton, England",1,-1.4043509,50.9097004
+92,"Spanish Town, Jamaica",1,-76.9758274,18.0193171
+828,"Sparks, Nevada, United States",1,-119.7526886,39.5349112
+484,"Sparta, New Jersey, United States",2,-74.6363588,41.0334562
+792,"Spartanburg, South Carolina, United States",1,-81.9320482,34.9495672
+54,"Spokane, Washington, United States",4,-117.4260466,47.6587802
+162,"Spring Valley, New York, United States",1,-74.0437521,41.1131514
+648,"Springfield, Missouri, United States",2,-93.2922989,37.2089572
+754,"Springfield, Oregon, United States",1,-123.0220289,44.0462362
+34,"St. Albans, Vermont, United States",1,-73.0835582,44.8107132
+597,"St. Albert, Alberta, Canada",1,-113.625642,53.6304753
+804,"St. Cloud, Minnesota, United States",1,-94.1632404,45.5579451
+316,"St. Isidore, Quebec, Canada",1,-73.6894351,45.2919679
+779,"St. Ives, New South Wales, Australia",1,151.16844,-33.72136
+107,"St. Louis, Missouri, United States",7,-90.1994042,38.6270025
+352,"St. Paul, Minnesota, United States",4,-93.0899578,44.9537029
+188,"St. Petersburg, Russia",3,30.3350986,59.9342802
+364,"Stanton, California, United States",1,-117.9931203,33.8028875
+100,"Staten Island, New York, United States",2,-74.1502007,40.5795317
+617,"Stockholm, Stockholm County, Sweden",1,18.0685808,59.3293235
+321,"Stockholm, Sweden",5,18.0685808,59.3293235
+303,"Stockton, California, United States",3,-121.2907796,37.9577016
+675,"Sudbury, Ontario, Canada",1,-80.9530353,46.522099
+181,"Suginami, Tokyo, Japan",1,139.6364379,35.6995657
+676,"Sun Valley, California, United States",1,-118.3812562,34.2279298
+699,"Sunderland, England",1,-1.4785737,54.8861515
+214,"Sunderland, Tyne and Wear, England",4,-1.383801,54.906869
+401,"Surrey, British Columbia, Canada",1,-122.801094,49.1044302
+727,"Swoyersville, Pennsylvania, United States",1,-75.8746407,41.2917475
+229,"Sydney, Australia",1,151.2092955,-33.8688197
+721,"Sydney, Australia, El Salvador",1,-89.0570357,13.4451379
+412,"Sydney, New South Wales, Australia",4,151.2092955,-33.8688197
+286,"Sylvan Lake, Michigan, United States",1,-83.3285467,42.6114217
+628,"Szczecin, Poland",1,14.5528116,53.4285438
+475,"Tachikawa, Tokyo, Japan",1,139.4078431,35.7140142
+614,"Tacoma, Washington, United States",2,-122.4442906,47.2528768
+774,"Takasaki, Gunma, Japan",1,139.0032936,36.3219088
+541,"Tallahassee, Florida, United States",1,-84.2807329,30.4382559
+23,"Tama, Iowa, United States",2,-92.576753,41.9627392
+105,"Tampa, Florida, United States",4,-82.4571776,27.950575
+758,"Tamuning, Guam, United States",1,144.8016402,13.5027167
+12,"Tarpon Springs, Florida, USA",1,-82.7567679,28.1461248
+547,"Tehran, Iran, Islamic Republic of",1,51.3889736,35.6891975
+271,"Tell City, Indiana, United States",1,-86.7677663,37.9514447
+190,"Temecula, California, United States",3,-117.1483648,33.4936391
+471,"Tempe, Arizona, United States",7,-111.9400054,33.4255104
+420,"Temple Hills, Maryland, United States",2,-76.9455296,38.8140024
+358,"Teresopolis, Rio de Janeiro, Brazil",1,-42.9756194,-22.416956
+103,"The Hague, Netherlands",1,4.3006999,52.0704978
+368,"Tijuana, Baja California, Mexico",3,-117.0382471,32.5149469
+702,"Tilburg, Netherlands",1,5.056375,51.5852528
+845,"Tlaltenango de Sanchez Roman, Zacatecas, Mexico",1,-103.3000788,21.7793074
+22,"Tokyo, Japan",12,139.6917064,35.6894875
+431,"Tokyo, Kanto, Japan",1,139.6917064,35.6894875
+242,"Tokyo, Kato, Japan",2,139.6800198,35.7214196
+325,"Toms River, New Jersey, United States",3,-74.1979458,39.9537358
+255,"Toronto, Ontario, Canada",3,-79.3831843,43.653226
+68,"Torrance, California, United States",2,-118.3406288,33.8358492
+191,"Torrance, California, USA",1,-118.3406288,33.8358492
+832,"Tres Rios, Rio de Janeiro, Brazil",1,-43.218947,-22.1170059
+158,"Tsu, Mie, Japan",1,136.5056975,34.718596
+169,"Tucson, Arizona, United States",5,-110.926479,32.2217429
+736,"Tukwila, Washington, United States",1,-122.2609558,47.4739884
+448,"Tulsa, Oklahoma, United States",3,-95.992775,36.1539816
+184,"Tulsa, Oklahoma, USA",1,-95.992775,36.1539816
+72,"Turku, Finland",3,22.2666303,60.4518126
+811,"Turlock, California, United States",1,-120.8465941,37.4946568
+805,"Tustin, California, United States",1,-117.8236391,33.7420005
+552,"Ubatuba, Sao Paulo, Brazil",1,-45.0838529,-23.4336713
+53,"Uhrichsville, Ohio, United States",1,-81.3464998,40.3931218
+384,"Umea, Sweden",1,20.2630354,63.8258471
+755,"Umea, Vasterbotten, Sweden",1,20.2630354,63.8258471
+830,"Umuarama, Parana, Brazil",1,-53.3206105,-23.7661064
+118,"Utah, United States",1,-111.0937311,39.3209801
+693,"Utrecht, Utrecht, Netherlands",1,5.1214201,52.0907374
+31,"Valdosta, Georgia, United States",1,-83.2784851,30.8327022
+114,"Van Nuys, California, United States",1,-118.451357,34.1898566
+130,"Vancouver, British Columbia, Canada",3,-123.1207375,49.2827291
+627,"Veliko Tarnovo, Bulgaria",1,25.6171514,43.0756739
+742,"Ventura, California, United States",1,-119.2290316,34.274646
+835,"Vicosa, Minas Gerais, Brazil",1,-42.8785788,-20.7548659
+523,"Victoria, British Columbia, Canada",1,-123.3656444,48.4284207
+328,"Victoriaville, Quebec, Canada",1,-71.9589559,46.0556724
+141,"Victorville, California, United States",1,-117.2927641,34.5362184
+631,"Vienna, Austria",1,16.3738189,48.2081743
+495,"Vila Velha, Espirito Santo, Brazil",1,-40.2949528,-20.3477821
+681,"Virginia Beach, Virginia, United States",1,-75.977985,36.8529263
+683,"Visalia, California, United States",2,-119.2920585,36.3302284
+626,"Visconde de Maua, Rio de Janeiro, Brazil",1,-44.5301793,-22.3301358
+268,"Vitoria da Conquista, Bahia, Brazil",2,-40.8445346,-14.8619237
+706,"Vladikavkaz, North Ossetia, Russia",1,44.6659759,43.0252344
+102,"Waco, Texas, United States",1,-97.1466695,31.549333
+637,"Waianae, Hawaii, United States",2,-158.1848755,21.4359641
+777,"Waipahu, Hawaii, United States",1,-158.0091667,21.3866667
+372,"Walsall, England",1,-1.982919,52.586214
+85,"Warsaw, Poland",2,21.0122287,52.2296756
+843,"Washougal, Washington, United States",1,-122.3534247,45.5826188
+532,"Wasilla, Alaska, USA",1,-149.4394444,61.5813889
+666,"Waterford, Wisconsin, United States",1,-88.2142563,42.7630722
+819,"Waterloo, Iowa, United States",1,-92.3425775,42.492786
+274,"Watford, Hertfordshire, England",1,-0.39032,51.656489
+390,"Waukee, Iowa, United States",1,-93.8855768,41.6119903
+746,"Wayne, Michigan, United States",1,-83.3863214,42.2814269
+542,"Webster, South Dakota, United States",1,-97.5200891,45.3321795
+270,"Weesp, Holland",1,5.0406217,52.3080507
+784,"West Bridgewater, Massachusetts, United States",1,-71.0078215,42.0189894
+656,"West Hills, California, United States",1,-118.6439809,34.1973122
+326,"West Linn, Oregon, United States",1,-122.6123141,45.3656761
+400,"Westwood, Massachusetts, United States",1,-71.2244987,42.2139873
+781,"Westwood, New Jersey, United States",1,-74.0326395,40.9912087
+517,"Wheat Ridge, Colorado, United States",1,-105.0772063,39.766098
+673,"Whippany, New Jersey, United States",1,-74.4022355,40.8254055
+606,"White Bear Lake, Minnesota, United States",1,-93.0081479,45.0853814
+186,"White Sands, New Mexico, United States",1,-106.4906526,32.3823687
+459,"Whonnock, British Columbia, Canada",1,-122.468939,49.176467
+486,"Wichita Falls, Texas, United States",1,-98.4933873,33.9137085
+322,"Wigan, Greater Manchester, England",1,-2.6325074,53.5450645
+786,"Wilmington, North Carolina, United States",1,-77.9447102,34.2257255
+530,"Windsor, California, United States",1,-122.8163802,38.5471327
+136,"Windsor, Ontario, Canada",2,-83.0363633,42.3149367
+239,"Winnipeg, Manitoba, Canada",3,-97.1383744,49.895136
+281,"Winter Haven, Florida, United States",1,-81.7328567,28.0222435
+504,"Wisbech, Cambridgeshire, England",1,0.158797,52.666317
+812,"Woodlake, California, United States",1,-119.0987176,36.4135605
+236,"Woodlands, Texas, United States",1,-95.4612625,30.1658207
+488,"Xapuri, Acre, Brazil",1,-68.4293214,-10.6521259
+483,"Xenia, Ohio, United States",1,-83.9296526,39.6847822
+808,"Xi'an, Shaanxi, China",1,108.93977,34.341574
+74,"Yakima, Washington, United States",1,-120.5058987,46.6020711
+482,"Yale, Iowa, USA",1,-94.3580219,41.7766528
+295,"Yamaguchi, Japan",1,131.4706493,34.1859563
+226,"Yelm, Washington, United States",1,-122.6059582,46.9420431
+241,"Yokohama, Kanagawa, Japan",2,139.6380256,35.4437078
+231,"Yokosuka, Kanagawa, Japan",1,139.6722005,35.2813412
+714,"Yonkers, New York, United States",1,-73.8987469,40.9312099
+752,"Yorba Linda, California, United States",1,-117.8132571,33.8885035
+593,"Yuma, Arizona, United States",2,-114.6276916,32.6926512
+429,"Zadar, Dalmatia, Croatia",1,15.5673225,43.948571
+291,"Zagreb, Croatia",2,15.981919,45.8150108
+685,"Zanesville, Ohio, United States",1,-82.0131924,39.9403453
+489,"Zevenbergen, Netherlands",1,4.6075226,51.6460635
+739,"Zinzeli, Astrakhan Oblast, Russia",1,NA,NA
+247,"Zuidlaren, Drenthe, Holland",1,6.6848434,53.0941274
