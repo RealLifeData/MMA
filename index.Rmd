@@ -227,7 +227,7 @@ ggplot(data=W, aes(x = reorder(Category, f1result), y=f1result, fill = round)) +
   ggtitle("Method of Win")+
   labs(y = "Count", x = "Win Type") +
   coord_flip() +
-  theme(axis.text=element_text(size=12))
+  theme(axis.text=element_text(size=14))
 
 ```
 
@@ -283,7 +283,7 @@ ggplot(data=ydiff3, aes(x = Result.x, y=Diff)) +
      ggtitle("Ring Rust")+
    labs(y = "Days Since Last Fight (Average)", x = "Result") +
    geom_errorbar(aes(ymin = upper, ymax = lower, width = .2))+
-  theme(axis.text=element_text(size=12))
+  theme(axis.text=element_text(size=14))
 
 
 colnames(ydiff3)[colnames(ydiff3)=="Result.x"] <- "Result"
@@ -326,7 +326,7 @@ ggplot(data=Ge3, aes(x = reorder(Category, Per), y=Per)) +
   labs(y = "Percentage of Fights", x = "Method of Win") +
   coord_flip()+ 
 scale_fill_manual("Gender", values = c("Female" = "green", "Male" = "blue"))+
-  theme(axis.text=element_text(size=12))
+  theme(axis.text=element_text(size=14))
 
 ```
 &nbsp;
@@ -361,7 +361,7 @@ ggplot(data=DGe3, aes(x = reorder(SubCat, Per), y=Per)) +
   labs(y = "Percentage of Fights", x = "Type of Decision") +
   coord_flip()+ 
 scale_fill_manual("Gender", values = c("Female" = "green", "Male" = "blue"))+
-  theme(axis.text=element_text(size=12))
+  theme(axis.text=element_text(size=14))
 
 ```
 
