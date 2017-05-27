@@ -203,7 +203,7 @@ All R code for this and other projects can be found on my [GitHub](https://githu
 
 ##Striking versus Grappling: How do fighters win in MMA?
 
-Most fights are won with striking, followed by chokes and joint locks.  The graph below also indicates that the vast majority of fights were won in the first round. 
+Most fights are won with striking, followed by chokes and joint locks.  The graph below also indicates that the majority of fights were won in the first round. 
 
 
 There were a total of 3,569 fights in this data set. No Contest results are not included. A more detailed analysis of the different types of strikes, chokes, joint locks that won fights can be found in the supplementary section. Subcategories of winning methods were cleaned up manually.  An analysis of Wins by Decision are also located in the supplementary section. 
