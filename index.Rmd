@@ -203,7 +203,7 @@ All R code for this and other projects can be found on my [GitHub](https://githu
 
 ##Striking versus Grappling: How do fighters win in MMA?
 
-Most fights are won with striking, followed by chokes and joint locks.  The graph below also indicates that the vast majority of fights were won in the first three rounds. 
+Most fights are won with striking, followed by chokes and joint locks.  The graph below also indicates that the vast majority of fights were won in the first round. 
 
 
 There were a total of 3,569 fights in this data set. No Contest results are not included. A more detailed analysis of the different types of strikes, chokes, joint locks that won fights can be found in the supplementary section. Subcategories of winning methods were cleaned up manually.  An analysis of Wins by Decision are also located in the supplementary section. 
@@ -226,7 +226,8 @@ ggplot(data=W, aes(x = reorder(Category, f1result), y=f1result, fill = round)) +
   scale_fill_manual(values = c("black", "brown", "purple", "blue", "white")) +
   ggtitle("Method of Win")+
   labs(y = "Count", x = "Win Type") +
-  coord_flip()
+  coord_flip() +
+  theme(axis.text=element_text(size=12))
 
 ```
 
@@ -281,7 +282,8 @@ ggplot(data=ydiff3, aes(x = Result.x, y=Diff)) +
    geom_bar(stat="identity",  color = "black", fill = "brown") +
      ggtitle("Ring Rust")+
    labs(y = "Days Since Last Fight (Average)", x = "Result") +
-   geom_errorbar(aes(ymin = upper, ymax = lower, width = .2))
+   geom_errorbar(aes(ymin = upper, ymax = lower, width = .2))+
+  theme(axis.text=element_text(size=12))
 
 
 colnames(ydiff3)[colnames(ydiff3)=="Result.x"] <- "Result"
@@ -323,7 +325,8 @@ ggplot(data=Ge3, aes(x = reorder(Category, Per), y=Per)) +
   geom_bar(aes(fill = Gender), position = "dodge", stat="identity", color = "black") +
   labs(y = "Percentage of Fights", x = "Method of Win") +
   coord_flip()+ 
-scale_fill_manual("Gender", values = c("Female" = "green", "Male" = "blue"))
+scale_fill_manual("Gender", values = c("Female" = "green", "Male" = "blue"))+
+  theme(axis.text=element_text(size=12))
 
 ```
 &nbsp;
@@ -357,7 +360,8 @@ ggplot(data=DGe3, aes(x = reorder(SubCat, Per), y=Per)) +
   geom_bar(aes(fill = Gender), position = "dodge", stat="identity", color = "black") +
   labs(y = "Percentage of Fights", x = "Type of Decision") +
   coord_flip()+ 
-scale_fill_manual("Gender", values = c("Female" = "green", "Male" = "blue"))
+scale_fill_manual("Gender", values = c("Female" = "green", "Male" = "blue"))+
+  theme(axis.text=element_text(size=12))
 
 ```
 
@@ -472,7 +476,8 @@ ggplot(data=S2, aes(x = reorder(SubCat, f1result), y=f1result, fill = round)) +
 scale_fill_manual(values = c("black", "brown", "purple", "blue", "white")) +
   ggtitle("Strike Wins")+
   labs(y = "Count", x = "Win Type") +
-  coord_flip()
+  coord_flip()+
+  theme(axis.text=element_text(size=12))
 
 ```
 
@@ -512,7 +517,8 @@ ggplot(data=JL2, aes(x = reorder(SubCat, f1result), y=f1result, fill = round)) +
 scale_fill_manual(values = c("black", "brown", "purple", "blue", "white")) +
     ggtitle("Joint Lock Wins")+
   labs(y = "Count", x = "Win Type") +
-  coord_flip()
+  coord_flip()+
+  theme(axis.text=element_text(size=12))
 
 ```
 
@@ -551,7 +557,8 @@ ggplot(data=CH2, aes(x = reorder(SubCat, f1result), y=f1result, fill = round)) +
   scale_fill_manual(values = c("black", "brown", "purple", "blue", "white")) +
   ggtitle("Method of Win")+
   labs(y = "Count", x = "Win Type") +
-  coord_flip()
+  coord_flip()+
+  theme(axis.text=element_text(size=12))
 
 ```
 
@@ -592,7 +599,8 @@ ggplot(data=DC2, aes(x = reorder(SubCat, f1result), y=f1result, fill = round)) +
   scale_fill_manual(values = c("black", "purple", "blue", "white")) +
     ggtitle("Decison Wins")+
   labs(y = "Count", x = "Win Type") +
-  coord_flip()
+  coord_flip()+
+  theme(axis.text=element_text(size=12))
 
 ```
 
@@ -633,7 +641,8 @@ ggplot(data=I2, aes(x = reorder(SubCat, f1result), y=f1result, fill = round)) +
   scale_fill_manual(values = c("purple", "blue", "white")) +
     ggtitle("Stoppage Wins")+
   labs(y = "Count", x = "Win Type") +
-  coord_flip()
+  coord_flip()+
+  theme(axis.text=element_text(size=12))
 
 ```
 
@@ -673,7 +682,8 @@ ggplot(data=ST2, aes(x = reorder(SubCat, f1result), y=f1result, fill = round)) +
   scale_fill_manual(values = c("black", "brown", "purple", "blue", "white")) +
     ggtitle("Stoppage Wins")+
   labs(y = "Count", x = "Win Type") +
-  coord_flip()
+  coord_flip()+
+  theme(axis.text=element_text(size=12))
 
 ```
 
@@ -713,7 +723,8 @@ ggplot(data=M2, aes(x = reorder(SubCat, f1result), y=f1result, fill = round)) +
   scale_fill_manual(values = c("brown", "purple", "blue", "white")) +
     ggtitle("Miscellaneous Wins")+
   labs(y = "Count", x = "Win Type") +
-  coord_flip()
+  coord_flip()+
+  theme(axis.text=element_text(size=12))
 
 ```
 
