@@ -368,6 +368,9 @@ scale_fill_manual("Gender", values = c("Female" = "green", "Male" = "blue"))+
 &nbsp;
 
 ##Where do MMA fighters come from? 
+
+Below is a map of all the UFC fighters contained in the data set.  It is interactive. 
+
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
 
 library("ggmap")
