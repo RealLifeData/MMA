@@ -14,6 +14,7 @@ library(knitr)
 library(ggplot2)
 setwd("C:\\Users\\owner\\Desktop\\MMA")
 
+
 #Fight data
 D <- read.csv("Fights2.csv")
 
@@ -95,13 +96,21 @@ FR3 <- FR3[!duplicated(FR3), ]
 
 
 TB_F1 <- select(D, f1fid, f1result, event_date)
-TB_F1$event_date <- as.POSIXct.Date(TB_F1$event_date,format="%Y-%m-%d")
+TB_F1$event_date <- as.character(TB_F1$event_date)
+TB_F1$event_date <- as.Date(TB_F1$event_date, format = "%m/%d/%Y")
+TB_F1$event_date <- as.POSIXct.Date(TB_F1$event_date,format="%d-%m-%Y")
+
+
+
 colnames(TB_F1)[colnames(TB_F1)=="f1fid"] <- "Fight_ID"
 colnames(TB_F1)[colnames(TB_F1)=="f1result"] <- "Result"
 
 
 TB_F2 <- select(D, f2fid, f2result, event_date)
-TB_F2$event_date <- as.POSIXct.Date(TB_F2$event_date,format="%Y-%m-%d")
+TB_F2$event_date <- as.character(TB_F2$event_date)
+TB_F2$event_date <- as.Date(TB_F2$event_date, format = "%m/%d/%Y")
+TB_F2$event_date <- as.POSIXct.Date(TB_F2$event_date,format="%d-%m-%Y")
+
 colnames(TB_F2)[colnames(TB_F2)=="f2fid"] <- "Fight_ID"
 colnames(TB_F2)[colnames(TB_F2)=="f2result"] <- "Result"
 
@@ -258,7 +267,9 @@ kable(W3)
 
 ##Ring Rust: Is it real? 
 
-The analysis below examined the average days between wins and losses for the fighter's last fight.  Results showed that fighter's who won their most recent fight in the data had a shorter time since their last fight than losers. This difference was statistically significant (p = .01) and therefore unlikely due to chance. 
+The analysis below examined the average days between wins and losses for the fighter's last fight.  Results showed that fighter's who won their most recent fight in the data had a longer time since their last fight than losers. This difference was statistically significant (p < .05). 
+
+**Prior version of this had an error in the code.  The currently displayed Ring Rust data is accurate.  Apologies for any confusion, when I did this originally several years ago I was new to R coding.** 
 
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE, comment=FALSE}
 
