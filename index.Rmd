@@ -12,7 +12,15 @@ library(dplyr)
 library(data.table)
 library(knitr)
 library(ggplot2)
-setwd("C:\\Users\\owner\\Desktop\\MMA")
+directory <- "/Users/emily.webber/Dropbox/Website Dropbox 2/MMA"
+setwd(directory)
+
+devtools::install_github("dkahle/ggmap")
+
+library(ggmap)
+register_google(key = "AIzaSyCYhbO5YSBLC4SkXk0u_9xmPO8nKwfrwY4")
+
+
 
 #Fight data
 D <- read.csv("Fights2.csv")
@@ -95,13 +103,21 @@ FR3 <- FR3[!duplicated(FR3), ]
 
 
 TB_F1 <- select(D, f1fid, f1result, event_date)
-TB_F1$event_date <- as.POSIXct.Date(TB_F1$event_date,format="%Y-%m-%d")
+TB_F1$event_date <- as.character(TB_F1$event_date)
+TB_F1$event_date <- as.Date(TB_F1$event_date, format = "%m/%d/%Y")
+TB_F1$event_date <- as.POSIXct.Date(TB_F1$event_date,format="%d-%m-%Y")
+
+
+
 colnames(TB_F1)[colnames(TB_F1)=="f1fid"] <- "Fight_ID"
 colnames(TB_F1)[colnames(TB_F1)=="f1result"] <- "Result"
 
 
 TB_F2 <- select(D, f2fid, f2result, event_date)
-TB_F2$event_date <- as.POSIXct.Date(TB_F2$event_date,format="%Y-%m-%d")
+TB_F2$event_date <- as.character(TB_F2$event_date)
+TB_F2$event_date <- as.Date(TB_F2$event_date, format = "%m/%d/%Y")
+TB_F2$event_date <- as.POSIXct.Date(TB_F2$event_date,format="%d-%m-%Y")
+
 colnames(TB_F2)[colnames(TB_F2)=="f2fid"] <- "Fight_ID"
 colnames(TB_F2)[colnames(TB_F2)=="f2result"] <- "Result"
 
@@ -190,7 +206,7 @@ Location3 <- Location2[1:10,]
 ```
 &nbsp;
 
-#Mixed Martial Analytics
+# Mixed Martial Analytics
 
 Data was scraped by an unknown 3rd party from the Sherdog Website.  It can be found [here](https://www.reddit.com/r/datasets/comments/47a7wh/ufc_fights_and_fighter_data/).
 
@@ -201,7 +217,7 @@ All R code for this and other projects can be found on my [GitHub](https://githu
 
 &nbsp;
 
-##Striking versus Grappling: How do fighters win in MMA?
+## Striking versus Grappling: How do fighters win in MMA?
 
 Most fights are won with striking, followed by chokes and joint locks.  The graph below also indicates that the majority of fights were won in the first round. 
 
@@ -256,9 +272,11 @@ kable(W3)
 ```
 &nbsp;
 
-##Ring Rust: Is it real? 
+## Ring Rust: Is it real? 
 
-The analysis below examined the average days between wins and losses for the fighter's last fight.  Results showed that fighter's who won their most recent fight in the data had a shorter time since their last fight than losers. This difference was statistically significant (p = .01) and therefore unlikely due to chance. 
+The analysis below examined the average days between wins and losses for the fighter's last fight.  Results showed that fighter's who won their most recent fight in the data had a longer time since their last fight than losers. This difference was statistically significant (p < .05). 
+
+**Prior version of this had an error in the code.  The currently displayed Ring Rust data is accurate.  Apologies for any confusion, when I did this originally several years ago I was new to R coding.** 
 
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE, comment=FALSE}
 
@@ -296,7 +314,7 @@ kable(ydiff3)
 ```
 &nbsp;
 
-##Fight like a girl: Are their gender differences in how MMA fights are won?
+## Fight like a girl: Are their gender differences in how MMA fights are won?
 
 For both men and women, more fights ended in decision than any other way.  This was followed by striking, then choking then joint locks for both genders. 
 
@@ -331,7 +349,7 @@ scale_fill_manual("Gender", values = c("Female" = "green", "Male" = "blue"))+
 ```
 &nbsp;
 
-###Are there gender differences in Decision Wins? 
+### Are there gender differences in Decision Wins? 
 
 Overall, male fights end in unanimous decisions slightly more often than female fights.  Female fights also have slightly more split decisions and majority decisions. 
 
@@ -367,7 +385,7 @@ scale_fill_manual("Gender", values = c("Female" = "green", "Male" = "blue"))+
 
 &nbsp;
 
-##Where do MMA fighters come from? 
+## Where do MMA fighters come from? 
 
 Below is a map of all the UFC fighters contained in the data set.  It is interactive. 
 
@@ -421,7 +439,7 @@ M
 ```
 &nbsp;
 
-##Where do most winners come from?
+## Where do most winners come from?
 Below are tables that include the Countries, Locations and Associations with the most wins. 
 
 **The country with the most wins was USA.** 
@@ -461,11 +479,11 @@ kable(Place3)
 
 
 
-#Supplementary Data 
+# Supplementary Data 
 
 &nbsp;
 
-###Wins by Strike
+### Wins by Strike
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
 
 
@@ -507,7 +525,7 @@ kable(S3)
 
 &nbsp;
 
-###Wins by Joint Lock
+### Wins by Joint Lock
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
 
 JL <- filter(D, Category == "JointLock")
@@ -546,7 +564,7 @@ kable(JL3)
 ```
 &nbsp;
 
-###Wins by Choke
+### Wins by Choke
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
 
 
@@ -589,7 +607,7 @@ kable(CH3)
 
 &nbsp;
 
-###Wins by Decision
+### Wins by Decision
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
 
 DC <- filter(D, Category == "Decision")
@@ -630,7 +648,7 @@ kable(DC3)
 ```
 &nbsp;
 
-###Wins by Injury
+### Wins by Injury
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
 
 
@@ -671,7 +689,7 @@ kable(I3)
 
 &nbsp;
 
-###Wins by Stoppage
+### Wins by Stoppage
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
 
 
@@ -712,7 +730,7 @@ kable(ST3)
 ```
 &nbsp;
 
-###Wins for other reasons 
+### Wins for other reasons 
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
 
 
@@ -756,4 +774,23 @@ kable(M3)
 ```
 
 
+<!--html_preserve-->
 
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-91308049-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-589036a8549be1ce"></script>
+
+
+<!--/html_preserve-->
