@@ -18,7 +18,7 @@ setwd(directory)
 devtools::install_github("dkahle/ggmap")
 
 library(ggmap)
-register_google(key = "AIzaSyCYhbO5YSBLC4SkXk0u_9xmPO8nKwfrwY4")
+register_google(key = "APIKEY")
 
 
 
