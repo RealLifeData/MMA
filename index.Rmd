@@ -22,6 +22,7 @@ register_google(key = "AIzaSyCYhbO5YSBLC4SkXk0u_9xmPO8nKwfrwY4")
 
 
 
+
 #Fight data
 D <- read.csv("Fights2.csv")
 
@@ -276,7 +277,6 @@ kable(W3)
 
 The analysis below examined the average days between wins and losses for the fighter's last fight.  Results showed that fighter's who won their most recent fight in the data had a longer time since their last fight than losers. This difference was statistically significant (p < .05). 
 
-**Prior version of this had an error in the code.  The currently displayed Ring Rust data is accurate.  Apologies for any confusion, when I did this originally several years ago I was new to R coding.** 
 
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE, comment=FALSE}
 
