@@ -7,7 +7,7 @@ title: "About Report"
 
 The data for this report can be found [here](https://www.reddit.com/r/datasets/comments/47a7wh/ufc_fights_and_fighter_data/).
 
-All R code for this and other projects can be found on my [GitHub](https://github.com/RealLifeData) site. 
+All R code for this and other projects can be found on my [GitHub](https://github.com/emilyswebber) site. 
 
 <!--html_preserve-->
 
