@@ -500,7 +500,7 @@ CountryR2 <- CountryR2[order(-CountryR2$Win_Loss_Ratio),]
 
 CountryR3 <- CountryR2[1:10,]
 colnames(CountryR3)[colnames(CountryR3)=="country"] <- "Country"
-
+CountryR3$Total <- NULL
 kable(CountryR3)
 
 ```
@@ -534,6 +534,8 @@ LocationR2 <- subset(LocationR,  Total >= 10)
 LocationR2 <- LocationR2[order(-LocationR2$Win_Loss_Ratio),]
 LocationR3 <- LocationR2[1:10,]
 colnames(LocationR3)[colnames(LocationR3)=="country"] <- "Country"
+LocationR3$Total <- NULL
+colnames(LocationR3)[colnames(LocationR3)=="Loc"] <- "Location"
 
 kable(LocationR3)
 ```
@@ -546,6 +548,7 @@ kable(LocationR3)
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
 colnames(Place3)[colnames(Place3)=="association"] <- "Association"
 rownames(Place3) <- NULL
+Place3$Win_Loss_Ratio <- Place3$Wins/Place3$Loss
 kable(Place3)
 
 ```
@@ -563,10 +566,9 @@ PlaceR <- setDT(FR3)[, lapply(.SD, sum), by = .(association), .SDcols = c("Wins"
 PlaceR$Win_Loss_Ratio <- PlaceR$Wins/PlaceR$Loss
 PlaceR$Total <- PlaceR$Wins + PlaceR$Loss + PlaceR$Draw
 PlaceR2 <- subset(PlaceR,  Total >= 10)
-
 PlaceR2 <- PlaceR2[order(-PlaceR2$Win_Loss_Ratio),]
 PlaceR2 <- PlaceR2[1:10,]
-
+PlaceR2$Total <- NULL
 kable(PlaceR2)
 ```
 
