@@ -249,6 +249,7 @@ ggplot(data=W, aes(x = reorder(Category, f1result), y=f1result, fill = round)) +
 ```
 
 
+
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
 W2 <- W
 W2$round <- factor(W$round, levels =c("1", "2", "3", "4", "5"))
@@ -271,6 +272,27 @@ kable(W3)
 
 
 ```
+&nbsp;
+
+
+## In what round are most fights won?
+
+&nbsp;
+
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
+
+ggplot(data=W, aes(x = reorder(round, f1result), y=f1result)) +
+  geom_bar(stat="identity", fill = "blue") +
+ scale_fill_manual(values = "blue") +
+  ggtitle("Win by Round")+
+  labs(y = "Count", x = "Rounds") +
+  coord_flip() +
+  theme(axis.text=element_text(size=14))
+
+```
+
+
+
 &nbsp;
 
 ## Ring Rust: Is it real? 
@@ -321,6 +343,8 @@ For both men and women, more fights ended in decision than any other way.  This 
 About 52% of female fights end in decision, while only 42% of male fights end in the same way. Men win more fights with striking (M:32%, F:25%) and choking (M:16%, F:14%) than women.  However, women win fights with joint locks more so than men (F: 8%, M: 5%).  Overall, women are more likely to last the entirety of the fight than men (F: 52%, M: 48%), but they are also less likely to knock out or choke out their opponents (M: 49%, F: 39%). 
 
 There were a total of 3,467 male fights and 102 female fights. The large disparity in the number of male and female fights required an analysis of percentages rather than raw counts. Percentage of total fights were calculated using a simple formula: Winning Method (count)/Fights (count).  Gender was not included in the data set, and was added manually by the author. 
+
+One piece of feedback regarding this data that I found interesting was that it is possble that physical weight is playing a role in the gender differences as well. The female fighters are lighter than the men, and limiting the male fighter comparison data to the lower male weight classes might offer a better comparison than including all male weight classes.
 
     
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
@@ -441,33 +465,84 @@ M
 
 ## Where do most winners come from?
 Below are tables that include the Countries, Locations and Associations with the most wins. 
+&nbsp;
 
+
+&nbsp;
 **The country with the most wins was USA.** 
 
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
 Country <- setDT(FR3)[, lapply(.SD, sum), by = .(country), .SDcols = c("Wins", "Loss", "Draw")]
 Country2 <- Country[order(-Country$Wins),]
-
 Country3 <- Country2[1:10,]
 colnames(Country3)[colnames(Country3)=="country"] <- "Country"
-
+Country3$Win_Loss_Ratio <- Country3$Wins/Country3$Loss
 kable(Country3)
 
 ```
 &nbsp;
 
+**The country with the best win/loss ratio is Scotland**
+
+For this data I only used countries that had at least 10 fights for this calculation.
+
+&nbsp;
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
+
+CountryR <- setDT(FR3)[, lapply(.SD, sum), by = .(country), .SDcols = c("Wins", "Loss", "Draw")]
+CountryR$Win_Loss_Ratio <- CountryR$Wins/Country$Loss
+CountryR$Total <- CountryR$Wins + CountryR$Loss + CountryR$Draw
+
+CountryR2 <- subset(CountryR,  Total >= 10)
+CountryR2 <- CountryR2[order(-CountryR2$Win_Loss_Ratio),]
+
+
+
+CountryR3 <- CountryR2[1:10,]
+colnames(CountryR3)[colnames(CountryR3)=="country"] <- "Country"
+
+kable(CountryR3)
+
+```
+
+&nbsp;
 **The location with the most wins is Rio de Janeiro, Brazil.** 
 
+&nbsp;
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
 colnames(Location3)[colnames(Location3)=="Loc"] <- "Location"
+Location3$Win_Loss_Ratio <- Location3$Wins/Location3$Loss
 
 kable(Location3)
 
 ```
 &nbsp;
 
+
+**The locations with the highest win/loss ratios are Santa Monica and Oxnard Cailfornia.** 
+
+I only used locations that had at least 10 fights for this calculation**
+
+&nbsp;
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
+
+LocationR <- setDT(FR3)[, lapply(.SD, sum), by = .(Loc), .SDcols = c("Wins", "Loss", "Draw")]
+LocationR$Win_Loss_Ratio <- LocationR$Wins/LocationR$Loss
+LocationR$Total <- LocationR$Wins + LocationR$Loss + LocationR$Draw
+LocationR2 <- subset(LocationR,  Total >= 10)
+
+LocationR2 <- LocationR2[order(-LocationR2$Win_Loss_Ratio),]
+LocationR3 <- LocationR2[1:10,]
+colnames(LocationR3)[colnames(LocationR3)=="country"] <- "Country"
+
+kable(LocationR3)
+```
+
+&nbsp;
+
 **The association with the most wins is the American Top Team.** 
 
+&nbsp;
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
 colnames(Place3)[colnames(Place3)=="association"] <- "Association"
 rownames(Place3) <- NULL
@@ -476,6 +551,24 @@ kable(Place3)
 ```
 
 &nbsp;
+
+**The association with the highest win/loss ratio is Team Frye.**  
+
+I only used associations who had at least 10 fights for this calculation.
+
+&nbsp;
+```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
+
+PlaceR <- setDT(FR3)[, lapply(.SD, sum), by = .(association), .SDcols = c("Wins", "Loss", "Draw")]
+PlaceR$Win_Loss_Ratio <- PlaceR$Wins/PlaceR$Loss
+PlaceR$Total <- PlaceR$Wins + PlaceR$Loss + PlaceR$Draw
+PlaceR2 <- subset(PlaceR,  Total >= 10)
+
+PlaceR2 <- PlaceR2[order(-PlaceR2$Win_Loss_Ratio),]
+PlaceR2 <- PlaceR2[1:10,]
+
+kable(PlaceR2)
+```
 
 
 
