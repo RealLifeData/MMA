@@ -477,6 +477,8 @@ Country2 <- Country[order(-Country$Wins),]
 Country3 <- Country2[1:10,]
 colnames(Country3)[colnames(Country3)=="country"] <- "Country"
 Country3$Win_Loss_Ratio <- Country3$Wins/Country3$Loss
+Country3$Win_Loss_Ratio <- round(Country3$Win_Loss_Ratio, digits = 2)
+
 kable(Country3)
 
 ```
@@ -491,6 +493,8 @@ For this data I only used countries that had at least 10 fights for this calcula
 
 CountryR <- setDT(FR3)[, lapply(.SD, sum), by = .(country), .SDcols = c("Wins", "Loss", "Draw")]
 CountryR$Win_Loss_Ratio <- CountryR$Wins/Country$Loss
+CountryR$Win_Loss_Ratio <- round(CountryR$Win_Loss_Ratio, digits = 2)
+
 CountryR$Total <- CountryR$Wins + CountryR$Loss + CountryR$Draw
 
 CountryR2 <- subset(CountryR,  Total >= 10)
@@ -512,6 +516,7 @@ kable(CountryR3)
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
 colnames(Location3)[colnames(Location3)=="Loc"] <- "Location"
 Location3$Win_Loss_Ratio <- Location3$Wins/Location3$Loss
+Location3$Win_Loss_Ratio <-round(Location3$Win_Loss_Ratio, digits = 2)
 
 kable(Location3)
 
@@ -521,13 +526,14 @@ kable(Location3)
 
 **The locations with the highest win/loss ratios are Santa Monica and Oxnard Cailfornia.** 
 
-I only used locations that had at least 10 fights for this calculation**
+I only used locations that had at least 10 fights for this calculation.
 
 &nbsp;
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE}
 
 LocationR <- setDT(FR3)[, lapply(.SD, sum), by = .(Loc), .SDcols = c("Wins", "Loss", "Draw")]
 LocationR$Win_Loss_Ratio <- LocationR$Wins/LocationR$Loss
+LocationR$Win_Loss_Ratio <- round(LocationR$Win_Loss_Ratio, digits = 2)
 LocationR$Total <- LocationR$Wins + LocationR$Loss + LocationR$Draw
 LocationR2 <- subset(LocationR,  Total >= 10)
 
@@ -549,6 +555,8 @@ kable(LocationR3)
 colnames(Place3)[colnames(Place3)=="association"] <- "Association"
 rownames(Place3) <- NULL
 Place3$Win_Loss_Ratio <- Place3$Wins/Place3$Loss
+Place3$Win_Loss_Ratio <- round(Place3$Win_Loss_Ratio, digits = 2)
+
 kable(Place3)
 
 ```
@@ -564,6 +572,7 @@ I only used associations who had at least 10 fights for this calculation.
 
 PlaceR <- setDT(FR3)[, lapply(.SD, sum), by = .(association), .SDcols = c("Wins", "Loss", "Draw")]
 PlaceR$Win_Loss_Ratio <- PlaceR$Wins/PlaceR$Loss
+PlaceR$Win_Loss_Ratio <- round(PlaceR$Win_Loss_Ratio, digits = 2)
 PlaceR$Total <- PlaceR$Wins + PlaceR$Loss + PlaceR$Draw
 PlaceR2 <- subset(PlaceR,  Total >= 10)
 PlaceR2 <- PlaceR2[order(-PlaceR2$Win_Loss_Ratio),]
