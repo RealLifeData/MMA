@@ -7,7 +7,7 @@ Punches,Strike,Punches
 Head Kick,Strike,Kick
 Lapel Choke,Choke,Lapel
 Guillotine Choke,Choke,Guillotine
-Armlock,JointLock,Armlock
+Armlock,JointLock,Armbar
 Elbows,Strike,Elbow
 Knees,Strike,Knee
 Punch,Strike,Punch
@@ -45,7 +45,7 @@ Kicking with Shoes,Strike,Kick
 Punches and Elbows,Strike,Elbow and Punch
 Triangle Armbar,JointLock,Triangle Armbar
 Dislocated Shoulder,Injury,Dislocated Shoulder
-Bulldog Choke,Choke,Injury
+Bulldog Choke,Choke,Bulldog
 Spinning Back Fist,Strike,Neck Injury
 Kick to the Body and Punches,Strike,Knee Injury
 Repeated Fouls,DQ,Shoulder Injury
@@ -55,7 +55,7 @@ Injury,Injury,Eye Injury
 Kimura,JointLock,Kimura
 Toe Hold,JointLock,Ankle Injury
 Knees and Punches,Strike,Jaw Injury
-Arm Triangle Choke,Choke,Thumb Injury
+Arm Triangle Choke,Choke,Arm-Triangle
 Kicking a Downed Opponent,Strike,Finger Injury
 Punches and Knees,Strike,Esophagus Injury
 Flying Head Kick and Punches,Strike,Hand Injury

@@ -297,7 +297,7 @@ ggplot(data=W, aes(x = reorder(round, f1result), y=f1result)) +
 
 ## Ring Rust: Is it real? 
 
-The analysis below examined the average days between wins and losses for the fighter's last fight.  Results showed that fighter's who won their most recent fight in the data had a longer time since their last fight than losers. This difference was statistically significant (p < .05). 
+The analysis below examined the average days between wins and losses for the fighter's last fight.  Results showed that fighters who won their most recent fight in the data had a longer time since their last fight than losers. This difference was statistically significant (p < .05). 
 
 
 ```{r fig.width= 10, fig.height = 6, echo = FALSE, warning = FALSE, comment=FALSE}
@@ -373,7 +373,7 @@ scale_fill_manual("Gender", values = c("Female" = "green", "Male" = "blue"))+
 ```
 &nbsp;
 
-### Are there gender differences in Decision Wins? 
+### Gender differences in Decision Wins? 
 
 Overall, male fights end in unanimous decisions slightly more often than female fights.  Female fights also have slightly more split decisions and majority decisions. 
 
