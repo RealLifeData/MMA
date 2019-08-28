@@ -754,7 +754,7 @@ I2$round <- factor(I2$round, levels =c("5", "4", "3", "2", "1"))
 
 ggplot(data=I2, aes(x = reorder(SubCat, f1result), y=f1result, fill = round)) +
   geom_bar(stat="identity", color = "black") +
-  scale_fill_manual(values = c("purple", "blue", "white")) +
+  scale_fill_manual(values = c("brown", "purple", "blue", "white")) +
     ggtitle("Stoppage Wins")+
   labs(y = "Count", x = "Win Type") +
   coord_flip()+

@@ -46,19 +46,19 @@ Punches and Elbows,Strike,Elbow and Punch
 Triangle Armbar,JointLock,Triangle Armbar
 Dislocated Shoulder,Injury,Dislocated Shoulder
 Bulldog Choke,Choke,Bulldog
-Spinning Back Fist,Strike,Neck Injury
-Kick to the Body and Punches,Strike,Knee Injury
-Repeated Fouls,DQ,Shoulder Injury
+Spinning Back Fist,Strike,Strike
+Kick to the Body and Punches,Strike,Kick and Punch
+Repeated Fouls,DQ,DQ
 Knee and Punches,Strike,Knee and Punch
-Inside Shoulder Lock,JointLock,Leg Injury
+Inside Shoulder Lock,JointLock,Shoulder
 Injury,Injury,Eye Injury
 Kimura,JointLock,Kimura
-Toe Hold,JointLock,Ankle Injury
-Knees and Punches,Strike,Jaw Injury
+Toe Hold,JointLock,Toe-Hold
+Knees and Punches,Strike,Knee and Punch
 Arm Triangle Choke,Choke,Arm-Triangle
-Kicking a Downed Opponent,Strike,Finger Injury
-Punches and Knees,Strike,Esophagus Injury
-Flying Head Kick and Punches,Strike,Hand Injury
+Kicking a Downed Opponent,DQ,DQ
+Punches and Knees,Injury,Esophagus Injury
+Flying Head Kick and Punches,Strike,Kick and Punch
 Body Lock,MISC,Body Lock
 Spinning Back Kick,Strike,Kick
 Submission (Rear-Naked Choke,Choke,Rear-Naked
